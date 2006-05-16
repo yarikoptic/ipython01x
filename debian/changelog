@@ -1,0 +1,219 @@
+ipython (0.7.1.fix1-2) unstable; urgency=low
+
+  * Set maintainer to Debian Python modules team and added myself to
+    uploaders.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 16 Apr 2006 15:53:43 +0200
+
+ipython (0.7.1.fix1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * Removed backported patch which was added in 0.7.1-3 to catch
+    KeyboardInterrupt exceptions properly, it's part of this release.
+  * Fixed names of pdfs in doc-base file to shut up linda.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 14 Feb 2006 23:51:17 +0100
+
+ipython (0.7.1-3) unstable; urgency=low
+
+  * Added a new patch from upstream to catch KeyboardInterrupt exceptions
+    properly.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 30 Jan 2006 19:42:31 +0100
+
+ipython (0.7.1-2) unstable; urgency=low
+
+  * Really remove alternatives on purge, thanks Lars Wirzenius for finding
+    the problem. (closes: #317269)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 29 Jan 2006 23:11:28 +0100
+
+ipython (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 24 Jan 2006 21:42:33 +0100
+
+ipython (0.7.0-2) unstable; urgency=low
+
+  * Fixed circular dependencies (closes: #341980)
+  * Added version to dependency on ipython dummy package. (closes: #320235)
+  * Removed python2.2 package, ipython now depends on python >= 2.3.
+  * Bumped up standards-version, no changes needed.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 21 Jan 2006 23:27:53 +0100
+
+ipython (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated 01_docdir-base.dpatch and 02_profiler-message.dpatch.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sat, 21 Jan 2006 20:08:23 +0100
+
+ipython (0.6.15-2) unstable; urgency=low
+
+  * New maintainer, thanks Jack for your work.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 28 Aug 2005 19:57:09 +0200
+
+ipython (0.6.15-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu,  2 Jun 2005 23:51:45 +0200
+
+ipython (0.6.14-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 31 May 2005 22:53:25 +0200
+
+ipython (0.6.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed backported patch which was added in 0.6.12-3 to fix misleading
+    prompt, it's part of this release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 15 Apr 2005 09:42:35 +0200
+
+ipython (0.6.12-4) unstable; urgency=medium
+
+  * Re-added python build-dependency, it got lost in 0.6.12-2.
+    (closes: #301636)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 27 Mar 2005 14:28:26 +0200
+
+ipython (0.6.12-3) unstable; urgency=low
+
+  * Added a new patch from cvs to fix misleading prompt2. (closes: #300847)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Sun, 27 Mar 2005 00:05:26 +0100
+
+ipython (0.6.12-2) unstable; urgency=low
+
+  * Added packages for python2.2 and python2.4, ipython package is now a dummy
+    package depending on ipython built for Debians default python.
+    (closes: #292537)
+  * Split out generic files into separate ipython-common package.
+  * Enhanced package descriptions.
+  * Removed CFLAGS settings from debian/rules, not required.
+  * Tweaked message displayed when profiler support is missing.
+  * Suggest the python-profiler package.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri, 25 Mar 2005 20:24:36 +0100
+
+ipython (0.6.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed patch which was added in 0.6.5-1.1 to make profiling support
+    optional, it was merged upstream.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed,  2 Mar 2005 12:15:09 +0100
+
+ipython (0.6.11-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixed broken profiling support unless -D is specified. (closes: #295779)
+  * Acknowledged NMUs. (closes: #206653, #294500, #294861, #280505)
+  * New co-maintainer, added myself to uploaders.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue,  1 Mar 2005 12:40:33 +0100
+
+ipython (0.6.5-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild with a python version that is actually in Debian.
+
+ -- Wichert Akkerman <wichert@wiggy.net>  Thu, 17 Feb 2005 23:08:52 +0100
+
+ipython (0.6.5-1.1) unstable; urgency=low
+
+  * NMU to apply patch making profiling support optional (provided by
+    Torsten Marek). (closes: #294500)
+
+ -- Steven R. Baker <srbaker@debian.org>  Thu, 17 Feb 2005 05:02:55 -0400
+
+ipython (0.6.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jack Moffitt <jack@xiph.org>  Thu,  2 Dec 2004 15:49:27 -0700
+
+ipython (0.6.4-1.1) unstable; urgency=low
+
+  * NMU from BSP Frankfurt:
+    - Added Build-Depends on dpatch (Closes: #280505)
+
+ -- Joerg Jaspert <joerg@debian.org>  Sat, 27 Nov 2004 18:28:17 +0100
+
+ipython (0.6.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated debian/rules to use dpatch and added debian/patches/*
+
+ -- Jack Moffitt <jack@xiph.org>  Tue,  9 Nov 2004 10:38:51 -0700
+
+ipython (0.6.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #262244, #252525)
+
+ -- Jack Moffitt <jack@xiph.org>  Wed, 22 Sep 2004 21:39:38 -0600
+
+ipython (0.6.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jack Moffitt <jack@xiph.org>  Sun,  9 May 2004 17:38:00 +0200
+
+ipython (0.4.0-1.1) unstable; urgency=low
+
+  * Non maintainer upload with maintainer consensus.
+  * Updated buil-dep to depend on python-2.3 (Closes: #206653)
+  * Included encoding comment string in modules under IPython to 
+    avoid python2.3 Warnigs (upstream noticed).
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Mon, 25 Aug 2003 19:02:20 +0200
+
+ipython (0.4.0-1) unstable; urgency=low
+
+  * New upstream release (Closes #195215)
+  * Updated Build-Depends (Closes #200021)
+
+ -- Jack Moffitt <jack@xiph.org>  Fri, 25 Jul 2003 10:16:12 -0600
+
+ipython (0.2.15pre3-4) unstable; urgency=low
+
+  * Add python-dev Build-Depends (Closes: #189901)
+
+ -- Jack Moffitt <jack@babyjesus.cantcode.com>  Mon, 12 May 2003 23:33:43 -0600
+
+ipython (0.2.15pre3-3) unstable; urgency=low
+
+  * Fix for accidently converting home directory files' line ends
+    instead of just the appropriate ipython configuration files
+    (Closes: #189042)
+
+ -- Jack Moffitt <jack@xiph.org>  Mon, 14 Apr 2003 21:18:18 -0600
+
+ipython (0.2.15pre3-2) unstable; urgency=low
+
+  * Added text of the PSF license to debian/copyright.
+
+ -- Jack Moffitt <jack@xiph.org>  Sat,  5 Apr 2003 11:41:31 -0700
+
+ipython (0.2.15pre3-1) unstable; urgency=low
+
+  * Updated documentation to point to the new homepage -
+    http://ipython.scipy.org
+  * Removed doc/COPYING and doc/GNU-LGPL to fix lintian warnings
+  * Public release ready (Closes: #185789)
+
+ -- Jack Moffitt <jack@xiph.org>  Tue,  1 Apr 2003 20:53:31 -0700
+
+ipython (0.2.15pre3-0a) unstable; urgency=low
+
+  * Initial Release.
+  * This is my first Debian package
+
+ -- Jack Moffitt <jack@xiph.org>  Wed, 12 Mar 2003 21:04:22 -0700
+

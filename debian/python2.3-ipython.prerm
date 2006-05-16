@@ -1,0 +1,8 @@
+#! /bin/sh -e
+if [ "$1" = "remove" ]; then
+	for i in ipython pycolor ; do
+		update-alternatives --remove $i /usr/bin/python2.3-$i
+	done
+fi
+
+#DEBHELPER#

@@ -1,0 +1,87 @@
+Source: ipython
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Norbert Tretkowski <nobse@debian.org>
+Build-Depends-Indep: debhelper (>> 4.1.65), dpatch (>= 2.0.10), python, python2.3-dev, python2.4-dev
+Standards-Version: 3.6.2
+
+Package: ipython
+Architecture: all
+Depends: python2.3-ipython (= ${Source-Version}), ipython-common
+Suggests: python-profiler
+Description: enhanced interactive Python shell [dummy package]
+ IPython is an enhanced interactive Python shell. It can be used as a
+ replacement for the standard Python shell, or it can be used as a
+ complete working environment for scientific computing (like Matlab or
+ Mathematica) when paired with the standard Python scientific and
+ numerical tools. It supports dynamic object introspections, numbered
+ input/output prompts, a macro system, session logging, session
+ restoring, complete system shell access, verbose and colored traceback
+ reports, auto-parentheses, auto-quoting, and is embeddedable in other
+ Python programs.
+ .
+ This package is an empty dummy package that always depends on a package
+ built for Debian's default Python version.
+ .
+ Homepage: http://ipython.scipy.org/ 
+
+Package: ipython-common
+Architecture: all
+Replaces: ipython (<= 0.6.12-1)
+Description: enhanced interactive Python shell [common files]
+ IPython is an enhanced interactive Python shell. It can be used as a
+ replacement for the standard Python shell, or it can be used as a
+ complete working environment for scientific computing (like Matlab or
+ Mathematica) when paired with the standard Python scientific and
+ numerical tools. It supports dynamic object introspections, numbered
+ input/output prompts, a macro system, session logging, session
+ restoring, complete system shell access, verbose and colored traceback
+ reports, auto-parentheses, auto-quoting, and is embeddedable in other
+ Python programs.
+ .
+ This package provides files shared by ipython across different python
+ versions.
+ .
+ Homepage: http://ipython.scipy.org/ 
+
+Package: python2.3-ipython
+Architecture: all
+Depends: ${python:Depends}, ipython-common
+Replaces: ipython (<= 0.6.12-1)
+Recommends: python2.3-numeric, python2.3-numeric-ext
+Suggests: python2.3-profiler
+Description: enhanced interactive Python shell [built for python 2.3]
+ IPython is an enhanced interactive Python shell. It can be used as a
+ replacement for the standard Python shell, or it can be used as a
+ complete working environment for scientific computing (like Matlab or
+ Mathematica) when paired with the standard Python scientific and
+ numerical tools. It supports dynamic object introspections, numbered
+ input/output prompts, a macro system, session logging, session
+ restoring, complete system shell access, verbose and colored traceback
+ reports, auto-parentheses, auto-quoting, and is embeddedable in other
+ Python programs.
+ .
+ This package is built with Python 2.3.
+ .
+ Homepage: http://ipython.scipy.org/ 
+
+Package: python2.4-ipython
+Architecture: all
+Depends: ${python:Depends}, ipython-common
+Recommends: python2.4-numeric, python2.4-numeric-ext
+Suggests: python2.4-profiler
+Description: enhanced interactive Python shell [built for python 2.4]
+ IPython is an enhanced interactive Python shell. It can be used as a
+ replacement for the standard Python shell, or it can be used as a
+ complete working environment for scientific computing (like Matlab or
+ Mathematica) when paired with the standard Python scientific and
+ numerical tools. It supports dynamic object introspections, numbered
+ input/output prompts, a macro system, session logging, session
+ restoring, complete system shell access, verbose and colored traceback
+ reports, auto-parentheses, auto-quoting, and is embeddedable in other
+ Python programs.
+ .
+ This package is built with Python 2.4.
+ .
+ Homepage: http://ipython.scipy.org/ 
