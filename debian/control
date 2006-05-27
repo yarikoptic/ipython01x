@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Norbert Tretkowski <nobse@debian.org>
 Build-Depends-Indep: debhelper (>> 4.1.65), dpatch (>= 2.0.10), python, python2.3-dev, python2.4-dev
-Standards-Version: 3.6.2
+Standards-Version: 3.7.2.0
 
 Package: ipython
 Architecture: all
