@@ -1,3 +1,9 @@
+ipython (0.7.1.fix1+0.7.2.rc1-2) UNRELEASED; urgency=low
+
+  * Added watch file
+
+ -- Piotr Ozarowski <ozarow@gmail.com>  Tue,  6 Jun 2006 13:36:46 +0200
+
 ipython (0.7.1.fix1+0.7.2.rc1-1) experimental; urgency=low
 
   * New upstream release candidate.
