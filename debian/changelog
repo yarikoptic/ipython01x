@@ -1,8 +1,12 @@
-ipython (0.7.1.fix1+0.7.2.rc1-2) UNRELEASED; urgency=low
+ipython (0.7.2-1) UNRELEASED; urgency=low
 
-  * Added watch file
+  [ Piotr Ozarowski ]
+  * Added watch file.
 
- -- Piotr Ozarowski <ozarow@gmail.com>  Tue,  6 Jun 2006 13:36:46 +0200
+  [ Norbert Tretkowski ]
+  * New upstream release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu,  8 Jun 2006 23:36:03 +0200
 
 ipython (0.7.1.fix1+0.7.2.rc1-1) experimental; urgency=low
 
