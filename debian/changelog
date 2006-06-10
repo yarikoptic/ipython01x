@@ -1,4 +1,4 @@
-ipython (0.7.2-1) UNRELEASED; urgency=low
+ipython (0.7.2-1) unstable; urgency=low
 
   [ Piotr Ozarowski ]
   * Added watch file.
