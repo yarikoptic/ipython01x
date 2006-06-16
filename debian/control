@@ -49,7 +49,7 @@ Package: python2.3-ipython
 Architecture: all
 Depends: ${python:Depends}, ipython-common
 Replaces: ipython (<= 0.6.12-1)
-Recommends: python2.3-numeric, python2.3-numeric-ext
+Recommends: python2.3-numeric, python2.3-numeric-ext, python2.3-pexpect
 Suggests: python2.3-profiler
 Description: enhanced interactive Python shell [built for python 2.3]
  IPython is an enhanced interactive Python shell. It can be used as a
@@ -69,7 +69,7 @@ Description: enhanced interactive Python shell [built for python 2.3]
 Package: python2.4-ipython
 Architecture: all
 Depends: ${python:Depends}, ipython-common
-Recommends: python2.4-numeric, python2.4-numeric-ext
+Recommends: python2.4-numeric, python2.4-numeric-ext, python2.4-pexpect
 Suggests: python2.4-profiler
 Description: enhanced interactive Python shell [built for python 2.4]
  IPython is an enhanced interactive Python shell. It can be used as a

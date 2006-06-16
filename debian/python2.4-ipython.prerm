@@ -1,6 +1,6 @@
 #! /bin/sh -e
 if [ "$1" = "remove" ]; then
-	for i in ipython pycolor ; do
+	for i in irunner ipython pycolor ; do
 		update-alternatives --remove $i /usr/bin/python2.4-$i
 	done
 fi
