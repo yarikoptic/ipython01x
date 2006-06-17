@@ -6,7 +6,7 @@ if [ "$1" = "configure" ]; then
 			--slave /usr/share/man/man1/$i.1.gz $i.1.gz /usr/share/man/man1/python2.4-$i.1.gz
 	done
 	update-alternatives --remove irunner /usr/bin/python2.4-irunner
-	update-alternatives --install /usr/bin/irunner irunner /usr/bin/python2.4-irunner
+	update-alternatives --install /usr/bin/irunner irunner /usr/bin/python2.4-irunner 30
 fi
 
 #DEBHELPER#
