@@ -1,3 +1,18 @@
+ipython (0.7.2-3.1) unstable; urgency=medium
+
+  * NMU.
+  * Convert to updated Python policy. Closes: #377787.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 13 Jul 2006 17:42:06 +0000
+
+ipython (0.7.2-3ubuntu1) edgy; urgency=low
+
+  * Synchronize with Debian unstable.
+  * Convert to updated Python policy. Collapse all packages into one
+    ipython package, don't handle ipython using alternatives.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 11 Jul 2006 09:47:37 +0000
+
 ipython (0.7.2-3) unstable; urgency=low
 
   * Removed alternative for irunner manpage.

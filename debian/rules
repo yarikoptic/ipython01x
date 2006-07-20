@@ -7,12 +7,17 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+PYDEF := $(shell pyversions -vd)
+PYVERS := $(filter-out $(PYDEF), $(shell pyversions -vr debian/control)) $(PYDEF)
+
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 
-	python2.3 setup.py config
-	python2.4 setup.py config
+	set -e; \
+	for v in $(PYVERS); do \
+	  python$$(echo $$v | sed "s/$(PYDEF)//") setup.py config; \
+	done
 
 	touch configure-stamp
 
@@ -22,8 +27,10 @@ build: patch configure build
 build-stamp:
 	dh_testdir
 
-	python2.3 setup.py build
-	python2.4 setup.py build
+	set -e; \
+	for v in $(PYVERS); do \
+	  python$$(echo $$v | sed "s/$(PYDEF)//") setup.py build; \
+	done
 
 	touch build-stamp
 
@@ -34,8 +41,11 @@ clean-patched:
 	dh_testroot
 	rm -f build-stamp configure-stamp
 
-	python2.3 setup.py clean --all
-	python2.4 setup.py clean --all
+	set -e; \
+	for v in $(PYVERS); do \
+	  python$$v setup.py clean --all; \
+	done
+	rm -rf build
 	rm -f setupext/*.pyc
 
 	dh_clean
@@ -56,23 +66,22 @@ install: build
 	dh_clean -k
 	dh_installdirs
 
-	python2.3 setup.py install --prefix $(CURDIR)/debian/python2.3-ipython/usr
-	python2.4 setup.py install --prefix $(CURDIR)/debian/python2.4-ipython/usr
+	set -e; \
+	for v in $(PYVERS); do \
+	  python$$(echo $$v | sed "s/$(PYDEF)//") setup.py install --prefix $(CURDIR)/debian/ipython/usr; \
+	done
 
 	# remove documentation
-	mkdir -p $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common
-	mv $(CURDIR)/debian/python2.3-ipython/usr/share/doc/ipython/* $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common
-	rm $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/COPYING
-	rm $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/ChangeLog
-	rm $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/ipython.el
-	rm $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/README_Windows.txt
-	rm $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/pycon.ico
-	rm -r $(CURDIR)/debian/python2.3-ipython/usr/share/doc/ipython
-	rm -r $(CURDIR)/debian/python2.4-ipython/usr/share/doc/ipython
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/COPYING
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/ChangeLog
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/ipython.el
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/README_Windows.txt
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/pycon.ico
 
 	# change permission on scripts
-	chmod a-x $(CURDIR)/debian/ipython-common/usr/share/doc/ipython-common/examples/*
+	chmod a-x $(CURDIR)/debian/ipython/usr/share/doc/ipython/examples/*
 
+ifeq (0,1)
 	# rename binaries
 	mv $(CURDIR)/debian/python2.3-ipython/usr/bin/ipython $(CURDIR)/debian/python2.3-ipython/usr/bin/python2.3-ipython
 	mv $(CURDIR)/debian/python2.3-ipython/usr/bin/irunner $(CURDIR)/debian/python2.3-ipython/usr/bin/python2.3-irunner
@@ -86,13 +95,14 @@ install: build
 	mv $(CURDIR)/debian/python2.3-ipython/usr/share/man/man1/pycolor.1.gz $(CURDIR)/debian/python2.3-ipython/usr/share/man/man1/python2.3-pycolor.1.gz
 	mv $(CURDIR)/debian/python2.4-ipython/usr/share/man/man1/ipython.1.gz $(CURDIR)/debian/python2.4-ipython/usr/share/man/man1/python2.4-ipython.1.gz
 	mv $(CURDIR)/debian/python2.4-ipython/usr/share/man/man1/pycolor.1.gz $(CURDIR)/debian/python2.4-ipython/usr/share/man/man1/python2.4-pycolor.1.gz
+endif
 
 binary-indep: build install
 	dh_testdir
 	dh_testroot
 	dh_link
-	dh_installchangelogs doc/ChangeLog -Npython2.3-ipython -Npython2.4-ipython -Nipython
-	dh_installdocs -Npython2.3-ipython -Npython2.4-ipython -Nipython
+	dh_installchangelogs doc/ChangeLog
+	dh_installdocs
 #	dh_installexamples
 	dh_install
 #	dh_installmenu
@@ -107,6 +117,7 @@ binary-indep: build install
 #	dh_installman doc/ipython.1.gz doc/pycolor.1.gz
 	dh_compress -Xexamples
 	dh_fixperms
+	dh_pycentral
 	dh_python
 #	dh_makeshlibs
 	dh_installdeb
