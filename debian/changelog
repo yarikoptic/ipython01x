@@ -1,7 +1,14 @@
+ipython (0.7.2-4) unstable; urgency=low
+
+  * Fixed spelling error in description. (closes: #363976)
+  * Ack NMU 0.7.2-3.1, thanks Matthias. (closes: #377787)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue,  1 Aug 2006 22:45:11 +0200
+
 ipython (0.7.2-3.1) unstable; urgency=medium
 
   * NMU.
-  * Convert to updated Python policy. Closes: #377787.
+  * Convert to updated Python policy. (closes: #377787)
 
  -- Matthias Klose <doko@debian.org>  Thu, 13 Jul 2006 17:42:06 +0000
 
