@@ -1,4 +1,4 @@
-ipython (0.7.2-5) UNRELEASED; urgency=low
+ipython (0.7.2-5) unstable; urgency=low
 
   * Added a new patch from svn to workaround bugs in python 2.3's inspect
     module. (closes: #374625)

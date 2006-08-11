@@ -5,7 +5,7 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
 Uploaders: Norbert Tretkowski <nobse@debian.org>
 Build-Depends-Indep: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), python-all-dev (>= 2.3.5-11), python-central (>= 0.5)
 XS-Python-Version: all
-Standards-Version: 3.7.2.0
+Standards-Version: 3.7.2.1
 
 Package: ipython
 Architecture: all
