@@ -1,3 +1,9 @@
+ipython (0.7.2-6) UNRELEASED; urgency=low
+
+  * Added XS-Vcs-Svn field
+
+ -- Piotr Ozarowski <ozarow@gmail.com>  Thu, 23 Nov 2006 14:44:43 +0100
+
 ipython (0.7.2-5) unstable; urgency=low
 
   * Added a new patch from svn to workaround bugs in python 2.3's inspect
