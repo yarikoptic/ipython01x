@@ -1,3 +1,9 @@
+ipython (0.7.3~beta1-1) experimental; urgency=low
+
+  * New upstream beta release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Wed, 29 Nov 2006 12:35:22 +0100
+
 ipython (0.7.2-6) UNRELEASED; urgency=low
 
   * Added XS-Vcs-Svn field
