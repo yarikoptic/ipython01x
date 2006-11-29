@@ -1,12 +1,14 @@
 ipython (0.7.3~beta1-1) experimental; urgency=low
 
   * New upstream beta release.
+  * Removed backported patch added in 0.7.2-5 to workaround bugs in python
+    2.3's inspect module.
 
  -- Norbert Tretkowski <nobse@debian.org>  Wed, 29 Nov 2006 12:35:22 +0100
 
 ipython (0.7.2-6) UNRELEASED; urgency=low
 
-  * Added XS-Vcs-Svn field
+  * Added XS-Vcs-Svn field.
 
  -- Piotr Ozarowski <ozarow@gmail.com>  Thu, 23 Nov 2006 14:44:43 +0100
 
