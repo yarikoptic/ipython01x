@@ -1,3 +1,9 @@
+ipython (0.7.3~beta2-1) experimental; urgency=low
+
+  * New upstream beta release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Fri,  8 Dec 2006 08:02:16 +0100
+
 ipython (0.7.3~beta1-1) experimental; urgency=low
 
   * New upstream beta release.
