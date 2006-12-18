@@ -1,3 +1,9 @@
+ipython (0.7.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 18 Dec 2006 22:23:55 +0100
+
 ipython (0.7.3~rc2-1) experimental; urgency=low
 
   * New upstream release candidate.
