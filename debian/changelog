@@ -1,3 +1,9 @@
+ipython (0.7.3-2) unstable; urgency=low
+
+  * Added a new patch from svn to fix jobctrl to work properly on posix.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 21 Dec 2006 20:13:57 +0100
+
 ipython (0.7.3-1) unstable; urgency=low
 
   * New upstream release.
