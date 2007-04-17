@@ -1,3 +1,9 @@
+ipython (0.8.0-1) unstable; urgency=low
+
+  * New upstream release. (closes: #419716)
+
+ -- Norbert Tretkowski <nobse@debian.org>  Tue, 17 Apr 2007 20:26:43 +0200
+
 ipython (0.7.3-2) unstable; urgency=low
 
   * Added a new patch from svn to fix jobctrl to work properly on posix.
