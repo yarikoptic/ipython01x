@@ -1,6 +1,7 @@
 ipython (0.8.0-1) unstable; urgency=low
 
   * New upstream release. (closes: #419716)
+  * Removed patches merged upstream.
 
  -- Norbert Tretkowski <nobse@debian.org>  Tue, 17 Apr 2007 20:26:43 +0200
 
