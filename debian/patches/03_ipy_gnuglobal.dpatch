@@ -1,0 +1,18 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## ipy_gnuglobal.dpatch by Bernd Zeimetz <bernd@bzed.de>
+##
+## DP: we're not in windows - there's /usr/bin/global for us
+
+@DPATCH@
+diff -urNad ipython~/IPython/Extensions/ipy_gnuglobal.py ipython/IPython/Extensions/ipy_gnuglobal.py
+--- ipython~/IPython/Extensions/ipy_gnuglobal.py	2007-03-25 07:22:14.000000000 +0200
++++ ipython/IPython/Extensions/ipy_gnuglobal.py	2007-04-24 01:18:12.000000000 +0200
+@@ -13,7 +13,7 @@
+ import os
+ 
+ # alter to your liking
+-global_bin = 'd:/opt/global/bin/global'
++global_bin = '/usr/bin/global'
+ 
+ def global_f(self,cmdline):
+     simple = 0

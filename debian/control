@@ -2,19 +2,18 @@ Source: ipython
 Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Norbert Tretkowski <nobse@debian.org>
-Build-Depends-Indep: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), python-all-dev (>= 2.3.5-11), python-central (>= 0.5)
-XS-Python-Version: all
+Uploaders: Norbert Tretkowski <nobse@debian.org>, Bernd Zeimetz <bernd@bzed.de>
+Build-Depends: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), cdbs (>= 0.4.43), python, python-support (>= 0.4)
 XS-Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
-Standards-Version: 3.7.2.1
+XS-Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/
+Standards-Version: 3.7.2.2
 
 Package: ipython
 Architecture: all
-Depends: ${python:Depends}
-Recommends: python-numeric, python-numeric-ext, python-pexpect
+Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
+Recommends: python-numeric, python-numeric-ext
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
-XB-Python-Version: all
 Suggests: python-profiler
 Description: enhanced interactive Python shell
  IPython is an enhanced interactive Python shell. It can be used as a
@@ -27,4 +26,4 @@ Description: enhanced interactive Python shell
  reports, auto-parentheses, auto-quoting, and is embeddable in other
  Python programs.
  .
- Homepage: http://ipython.scipy.org/ 
+  Homepage: http://ipython.scipy.org/

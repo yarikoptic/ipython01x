@@ -1,0 +1,5 @@
+ipython: script-not-executable ./usr/share/pycentral/ipython/site-packages/IPython/Extensions/ipy_completers.py
+ipython: script-not-executable ./usr/share/pycentral/ipython/site-packages/IPython/Extensions/ipy_gnuglobal.py
+ipython: script-not-executable ./usr/share/pycentral/ipython/site-packages/IPython/Extensions/pickleshare.py
+ipython: script-not-executable ./usr/share/pycentral/ipython/site-packages/IPython/irunner.py
+ipython: script-not-executable ./usr/share/pycentral/ipython/site-packages/IPython/upgrade_dir.py

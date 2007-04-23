@@ -1,3 +1,38 @@
+ipython (0.8.0-2) UNRELEASED; urgency=low
+
+  * debian/changelog:
+     - adding missing colons to Closes entries to fix two
+       lintian warnings
+  * debian/compat:
+     - bumping compat level to 5
+  * debian/control:
+     - adding XS-Vcs-Browser
+     - remove no longer needed X*-Python-Version fields
+     - moving python-pexpect from Recommends to Depends because
+       /usr/bin/irunner is not useable without it
+     - moving debhelper and dpatch from Build-Depends-Indep to
+       Build-Depends, fixing the following lintian errors:
+         - clean-should-be-satisfied-by-build-depends debhelper
+         - clean-should-be-satisfied-by-build-depends dpatch
+     - removing unnecessary Build-Depends-Indep on python-all-dev,
+       adding python to Build-Depends instead
+     - replacing python-central by python-support to be able to
+       fix #420134 without hassle
+     - adding ${misc:Depends}
+     - adding the missing identation for Homepage:
+     - adding cdbs as Build-Depends
+     - adding myself to Uploaders
+  * debian/patches/03_ipy_gnuglobal.dpatch:
+     - fix the location of the global binary - we're not on windows
+  * debian/rules:
+     - removing old crust, using cdbs to make things clear again
+     - using python-support instead of python-central to make
+       modules for 2.5 avaiable now. (Closes: #420134)
+  * adding lintian ovverrides for several scripts included in the
+    IPython/Extensions directory.
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 24 Apr 2007 01:53:33 +0200
+
 ipython (0.8.0-1) unstable; urgency=low
 
   * New upstream release. (closes: #419716)
@@ -280,8 +315,8 @@ ipython (0.4.0-1.1) unstable; urgency=low
 
 ipython (0.4.0-1) unstable; urgency=low
 
-  * New upstream release (Closes #195215)
-  * Updated Build-Depends (Closes #200021)
+  * New upstream release (Closes: #195215)
+  * Updated Build-Depends (Closes: #200021)
 
  -- Jack Moffitt <jack@xiph.org>  Fri, 25 Jul 2003 10:16:12 -0600
 
