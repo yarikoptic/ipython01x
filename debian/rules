@@ -17,7 +17,7 @@ install/ipython::
 	chmod a-x $(CURDIR)/debian/ipython/usr/share/doc/ipython/examples/*
 
 	# add lintian overrides
-	cp $(CURDIR)/debian/ipython-lintian $(CURDIR)/debian/ipython/usr/share/lintian/overrides/
+	cp $(CURDIR)/debian/ipython-lintian $(CURDIR)/debian/ipython/usr/share/lintian/overrides/ipython
 
 	# removing bogus usr/IPython directory
 	rm -rf $(CURDIR)/debian/ipython/usr/IPython
