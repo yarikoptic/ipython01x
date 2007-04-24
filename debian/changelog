@@ -1,4 +1,4 @@
-ipython (0.8.0-2) UNRELEASED; urgency=low
+ipython (0.8.0-2) unstable; urgency=low
 
   * debian/changelog:
      - adding missing colons to Closes entries to fix two
