@@ -5,7 +5,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/python-distutils.mk
 include /usr/share/cdbs/1/rules/dpatch.mk
 
-ipython/install::
+install/ipython::
 	# remove documentation
 	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/COPYING
 	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/ChangeLog
@@ -18,3 +18,6 @@ ipython/install::
 
 	# add lintian overrides
 	cp $(CURDIR)/debian/ipython-lintian $(CURDIR)/debian/ipython/usr/share/lintian/overrides/
+
+	# removing bogus usr/IPython directory
+	rm -rf $(CURDIR)/debian/ipython/usr/IPython
