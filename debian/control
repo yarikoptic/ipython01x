@@ -11,7 +11,7 @@ Standards-Version: 3.7.2.2
 Package: ipython
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
-Recommends: python-numeric, python-numeric-ext
+Recommends: python-numeric, python-numeric-ext, python-matplotlib
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
 Suggests: python-profiler

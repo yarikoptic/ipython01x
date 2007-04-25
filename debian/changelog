@@ -1,3 +1,11 @@
+ipython (0.8.0-3) UNRELEASED; urgency=low
+
+  * debian/control:
+     - adding python-matplotlib to Recommends because
+       it is needed to run ipython -pylab
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Thu, 26 Apr 2007 00:55:08 +0200
+
 ipython (0.8.0-2) unstable; urgency=low
 
   * debian/changelog:
