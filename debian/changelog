@@ -8,7 +8,10 @@ ipython (0.8.1-1) UNRELEASED; urgency=low
   [ Norbert Tretkowski ]
   * New upstream release.
 
- -- Norbert Tretkowski <nobse@debian.org>  Sat,  9 Jun 2007 22:48:52 +0200
+  [ Reinhard Tartler ]
+  * Install ipython.el properly.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Mon, 11 Jun 2007 18:50:26 +0200
 
 ipython (0.8.0-2) unstable; urgency=low
 
