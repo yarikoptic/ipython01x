@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Norbert Tretkowski <nobse@debian.org>, Bernd Zeimetz <bernd@bzed.de>
 Build-Depends: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), cdbs (>= 0.4.43), python, python-support (>= 0.4)
+Homepage: http://ipython.scipy.org/
 XS-Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 XS-Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/
 Standards-Version: 3.7.2.2
@@ -24,5 +25,3 @@ Description: enhanced interactive Python shell
  session logging, session restoring, complete system shell access,
  verbose and colored traceback reports, auto-parentheses, auto-quoting,
  and is embeddable in other Python programs.
- .
-  Homepage: http://ipython.scipy.org/

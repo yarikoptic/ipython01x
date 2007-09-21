@@ -1,3 +1,9 @@
+ipython (0.8.1-2) UNRELEASED; urgency=low
+
+  * Homepage field added
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 21 Sep 2007 21:40:41 +0200
+
 ipython (0.8.1-1) unstable; urgency=low
 
   [ Bernd Zeimetz ]
