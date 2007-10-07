@@ -1,8 +1,9 @@
 ipython (0.8.1-2) UNRELEASED; urgency=low
 
   * Homepage field added
+  * Rename XS-Vcs-* fields to Vcs-* (dpkg supports them now)
 
- -- Piotr Ożarowski <piotr@debian.org>  Fri, 21 Sep 2007 21:40:41 +0200
+ -- Piotr Ożarowski <piotr@debian.org>  Sat,  6 Oct 2007 23:46:33 +0200
 
 ipython (0.8.1-1) unstable; urgency=low
 
