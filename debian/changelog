@@ -3,6 +3,7 @@ ipython (0.8.1-2) unstable; urgency=low
   [ Piotr Ożarowski ]
   * Homepage field added
   * Rename XS-Vcs-* fields to Vcs-* (dpkg supports them now)
+  * Add 04_remove_shebang patch 
 
   [ Bernd Zeimetz ]
   * Replacing Recommends by Suggests to stop ipython from installing ~500MB

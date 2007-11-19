@@ -1,3 +1,4 @@
 01_docdir-base
 02_profiler-message
 03_ipy_gnuglobal
+04_remove_shebang
