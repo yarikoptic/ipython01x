@@ -12,10 +12,9 @@ Standards-Version: 3.7.2.2
 Package: ipython
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
-Recommends: python-numeric, python-numeric-ext, python-matplotlib
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
-Suggests: python-profiler
+Suggests: python-profiler, python-numeric, python-numeric-ext, python-matplotlib
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
