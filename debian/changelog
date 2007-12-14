@@ -1,12 +1,16 @@
 ipython (0.8.2-1) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+    AND DO NOT RELEASE YET.
+    TARBALL CONTAINS NON-FREE MATERIAL.
   * New upstream version.
   * debian/control:
     - Updating my email address.
     - Updating Standards-Version to 3.7.3.
+  * debian/copyright:
+    - Updating the file to reflect the current copyrights and licenses.
 
- -- Bernd Zeimetz <bzed@debian.org>  Fri, 14 Dec 2007 20:17:44 +0100
+ -- Bernd Zeimetz <bzed@debian.org>  Fri, 14 Dec 2007 22:02:40 +0100
 
 ipython (0.8.1-2) unstable; urgency=low
 

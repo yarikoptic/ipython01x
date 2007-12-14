@@ -3,19 +3,220 @@ Wed, 12 Mar 2003 20:38:14 -0700.
 
 It was downloaded from http://ipython.scipy.org/
 
-Upstream Author: Fernando Perez <fperez@colorado.edu>,
-		 Janko Hauser <jhauser@ifm.uni-kiel.de>,
-		 Nathaniel Gray <n8gray@caltech.edu>
+Upstream Authors: Fernando Perez <fperez@colorado.edu>,
+                  Janko Hauser <jhauser@zscout.de>,
+                  Nathaniel Gray <n8gray@caltech.edu>
 
-Copyright:
 
-Most IPython code is copyright (C) 2001 by Fernando Perez, Janko
-Hauser, and Nathaniel Gray.  All code is licensed under the GNU Lesser
-General Public License (LGPL) except as explicitly mentioned below.
-Its full text is included in the file /usr/share/common-licenses/LGPL.
 
-DPyGetOpt.py is copyright (C) 2001 by Bill Bumgarner <bbum@friday.com>
-and is licensed under the MIT license, reproduced below:
+IPython copyright and licensing notes
+=====================================
+
+Unless indicated otherwise, files in this project are covered by a BSD-type
+license, included below.
+
+Individual authors are the holders of the copyright for their code and are
+listed in each file.
+
+Some files (DPyGetOpt.py, for example) may be licensed under different
+conditions. Ultimately each file indicates clearly the conditions under which
+its author/authors have decided to publish the code.
+
+
+IPython license
+---------------
+
+IPython is released under a BSD-type license.
+
+Copyright (c) 2001, 2002, 2003, 2004 Fernando Perez <fperez@colorado.edu>.
+
+Copyright (c) 2001 Janko Hauser <jhauser@zscout.de> and Nathaniel Gray
+<n8gray@caltech.edu>.
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+  a. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+
+  b. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  c. Neither the name of the copyright holders nor the names of any
+     contributors to this software may be used to endorse or promote products
+     derived from this software without specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+
+
+Files with extra copyrights/licenses:
+-------------------------------------
+Unless indicated otherwise, files covered by a BSD-type license, see above.
+
+* IPython/Extensions/InterpreterExec.py:
+  Copyright (C) 2004 W.J. van der Laan <gnufnork@hetdigitalegat.nl>
+  Copyright (C) 2004-2006 Fernando Perez <fperez@colorado.edu>
+
+* IPython/Extensions/ipy_constants.py:
+  Copyright: Gael Varoquaux <gael.varoquaux@normalesup.org>
+
+* IPython/Extensions/ipy_profile_zope.py:
+  Copyright (c) InQuant GmbH
+  Stefan Eletzhofer <stefan.eletzhofer@inquant.de>
+
+* IPython/external/simplegeneric.py:
+  This is version 0.6 of Philip J. Eby's simplegeneric module
+  (http://cheeseshop.python.org/pypi/simplegeneric) patched to work
+  with Python 2.3 (which doesn't support assigning to __name__)
+  License: PSF or ZPL, full licenses attached below.
+
+* IPython/DPyGetOpt.py:
+  Copyright (c) 2001 Bill Bumgarner <bbum@friday.com>
+  License: MIT, see below.
+
+* IPython/Debugger.py:
+  Copyright (C) 2001 Python Software Foundation, www.python.org
+  Taken from Python2.2, License: PSF - see below.
+
+* IPython/wildcard.py:
+  Copyright (C) 2005 Jörgen Stenarson <jorgen.stenarson@bostream.nu>
+
+* IPython/winconsole.py:
+  This file is placed in the public domain.
+
+
+
+
+PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+--------------------------------------------
+
+1. This LICENSE AGREEMENT is between the Python Software Foundation
+("PSF"), and the Individual or Organization ("Licensee") accessing and
+otherwise using this software ("Python") in source or binary form and
+its associated documentation.
+
+2. Subject to the terms and conditions of this License Agreement, PSF
+hereby grants Licensee a nonexclusive, royalty-free, world-wide
+license to reproduce, analyze, test, perform and/or display publicly,
+prepare derivative works, distribute, and otherwise use Python
+alone or in any derivative version, provided, however, that PSF's
+License Agreement and PSF's notice of copyright, i.e., "Copyright (c)
+2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation; All Rights
+Reserved" are retained in Python alone or in any derivative version 
+prepared by Licensee.
+
+3. In the event Licensee prepares a derivative work that is based on
+or incorporates Python or any part thereof, and wants to make
+the derivative work available to others as provided herein, then
+Licensee hereby agrees to include in any such work a brief summary of
+the changes made to Python.
+
+4. PSF is making Python available to Licensee on an "AS IS"
+basis.  PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND
+DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS
+FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT
+INFRINGE ANY THIRD PARTY RIGHTS.
+
+5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON
+FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS
+A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,
+OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+
+6. This License Agreement will automatically terminate upon a material
+breach of its terms and conditions.
+
+7. Nothing in this License Agreement shall be deemed to create any
+relationship of agency, partnership, or joint venture between PSF and
+Licensee.  This License Agreement does not grant permission to use PSF
+trademarks or trade name in a trademark sense to endorse or promote
+products or services of Licensee, or any third party.
+
+8. By copying, installing or otherwise using Python, Licensee
+agrees to be bound by the terms and conditions of this License
+Agreement.
+
+
+
+
+
+Zope Public License (ZPL) Version 2.1
+-----------------------------------------------
+
+A copyright notice accompanies this license document that
+identifies the copyright holders.
+
+This license has been certified as open source. It has also
+been designated as GPL compatible by the Free Software
+Foundation (FSF).
+
+Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the
+following conditions are met:
+
+1. Redistributions in source code must retain the
+   accompanying copyright notice, this list of conditions,
+   and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the accompanying
+   copyright notice, this list of conditions, and the
+   following disclaimer in the documentation and/or other
+   materials provided with the distribution.
+
+3. Names of the copyright holders must not be used to
+   endorse or promote products derived from this software
+   without prior written permission from the copyright
+   holders.
+
+4. The right to distribute this software or to use it for
+   any purpose does not give you the right to use
+   Servicemarks (sm) or Trademarks (tm) of the copyright
+   holders. Use of them is covered by separate agreement
+   with the copyright holders.
+
+5. If any files are modified, you must cause the modified
+   files to carry prominent notices stating that you changed
+   the files and the date of any change.
+
+Disclaimer
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS''
+  AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT
+  NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN
+  NO EVENT SHALL THE COPYRIGHT HOLDERS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+  DAMAGE.
+
+
+
+
+
+
+MIT License
+-----------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
@@ -35,134 +236,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 
-FlexCompleter.py is copyright (C) 2001 by the Python Software
-Foundation and licensed under the terms of the Python Software
-Foundation License, reproduced below:
-
-A. HISTORY OF THE SOFTWARE
-==========================
-
-Python was created in the early 1990s by Guido van Rossum at Stichting
-Mathematisch Centrum (CWI) in the Netherlands as a successor of a
-language called ABC.  Guido is Python's principal author, although it
-includes many contributions from others.  The last version released
-from CWI was Python 1.2.  In 1995, Guido continued his work on Python
-at the Corporation for National Research Initiatives (CNRI) in Reston,
-Virginia where he released several versions of the software.  Python
-1.6 was the last of the versions released by CNRI.  In 2000, Guido and
-the Python core development team moved to BeOpen.com to form the
-BeOpen PythonLabs team.  Python 2.0 was the first and only release
-from BeOpen.com.
-
-Following the release of Python 1.6, and after Guido van Rossum left
-CNRI to work with commercial software developers, it became clear that
-the ability to use Python with software available under the GNU Public
-License (GPL) was very desirable.  CNRI and the Free Software
-Foundation (FSF) interacted to develop enabling wording changes to the
-Python license.  Python 1.6.1 is essentially the same as Python 1.6,
-with a few minor bug fixes, and with a different license that enables
-later versions to be GPL-compatible.  Python 2.1 is a derivative work
-of Python 1.6.1, as well as of Python 2.0.
-
-After Python 2.0 was released by BeOpen.com, Guido van Rossum and the
-other PythonLabs developers joined Digital Creations.  All
-intellectual property added from this point on, starting with Python
-2.1 and its alpha and beta releases, is owned by the Python Software
-Foundation (PSF), a non-profit modeled after the Apache Software
-Foundation.  See http://www.python.org/psf/ for more information about
-the PSF.
-
-Thanks to the many outside volunteers who have worked under Guido's
-direction to make these releases possible.
-
-
-B. TERMS AND CONDITIONS FOR ACCESSING OR OTHERWISE USING PYTHON
-===============================================================
-
-PSF LICENSE AGREEMENT
----------------------
-
-1. This LICENSE AGREEMENT is between the Python Software Foundation
-("PSF"), and the Individual or Organization ("Licensee") accessing and
-otherwise using Python 2.1 software in source or binary form and its
-associated documentation.
-
-2. Subject to the terms and conditions of this License Agreement, PSF
-hereby grants Licensee a nonexclusive, royalty-free, world-wide
-license to reproduce, analyze, test, perform and/or display publicly,
-prepare derivative works, distribute, and otherwise use Python 2.1
-alone or in any derivative version, provided, however, that PSF's
-License Agreement and PSF's notice of copyright, i.e., "Copyright (c)
-2001 Python Software Foundation; All Rights Reserved" are retained in
-Python 2.1 alone or in any derivative version prepared by Licensee.
-
-3. In the event Licensee prepares a derivative work that is based on
-or incorporates Python 2.1 or any part thereof, and wants to make
-the derivative work available to others as provided herein, then
-Licensee hereby agrees to include in any such work a brief summary of
-the changes made to Python 2.1.
-
-4. PSF is making Python 2.1 available to Licensee on an "AS IS"
-basis.  PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
-IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND
-DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS
-FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON 2.1 WILL NOT
-INFRINGE ANY THIRD PARTY RIGHTS.
-
-5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON
-2.1 FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A
-RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON 2.1, OR
-ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
-
-6. This License Agreement will automatically terminate upon a material
-breach of its terms and conditions.
-
-7. This License Agreement shall be governed by the federal
-intellectual property law of the United States, including without
-limitation the federal copyright law, and, to the extent such
-U.S. federal law does not apply, by the law of the Commonwealth of
-Virginia, excluding Virginia's conflict of law provisions.
-Notwithstanding the foregoing, with regard to derivative works based
-on Python 1.6.1 that incorporate non-separable material that was
-previously distributed under the GNU General Public License (GPL), the
-law of the Commonwealth of Virginia shall govern this License
-Agreement only as to issues arising under or with respect to
-Paragraphs 4, 5, and 7 of this License Agreement.  Nothing in this
-License Agreement shall be deemed to create any relationship of
-agency, partnership, or joint venture between CNRI and Licensee.  This
-License Agreement does not grant permission to use CNRI trademarks or
-trade name in a trademark sense to endorse or promote products or
-services of Licensee, or any third party.
-
-8. By clicking on the "ACCEPT" button where indicated, or by copying,
-installing or otherwise using Python 1.6.1, Licensee agrees to be
-bound by the terms and conditions of this License Agreement.
-
-        ACCEPT
-
-
-CWI PERMISSIONS STATEMENT AND DISCLAIMER
-----------------------------------------
-
-Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,
-The Netherlands.  All rights reserved.
-
-Permission to use, copy, modify, and distribute this software and its
-documentation for any purpose and without fee is hereby granted,
-provided that the above copyright notice appear in all copies and that
-both that copyright notice and this permission notice appear in
-supporting documentation, and that the name of Stichting Mathematisch
-Centrum or CWI not be used in advertising or publicity pertaining to
-distribution of the software without specific, written prior
-permission.
-
-STICHTING MATHEMATISCH CENTRUM DISCLAIMS ALL WARRANTIES WITH REGARD TO
-THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
-FITNESS, IN NO EVENT SHALL STICHTING MATHEMATISCH CENTRUM BE LIABLE
-FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
-OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-Itpl.py is copyright (C) 2001 Ka-Ping Yee <ping@lfw.org> and licensed
-under the MIT license reproduced above.
