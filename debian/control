@@ -6,7 +6,7 @@ Uploaders: Norbert Tretkowski <nobse@debian.org>, Bernd Zeimetz <bzed@debian.org
 Build-Depends: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), cdbs (>= 0.4.43), python, python-support (>= 0.4)
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
-Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/
+Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/?op=log
 Standards-Version: 3.7.3
 
 Package: ipython
