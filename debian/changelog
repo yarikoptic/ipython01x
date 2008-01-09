@@ -1,8 +1,9 @@
-ipython (0.8.2.dfsg-1) UNRELEASED; urgency=low
+ipython (0.8.2.dfsg-1) unstable; urgency=low
 
   [ Bernd Zeimetz ]
   * New upstream version. Manually adding the source of the documentation to
     the tarball. It will be shipped by upstream with the next release.
+    (Closes: #458383)
   * debian/uscan-dfsg-clean.sh, debian/watch, debian/rules:
     - Adding uscan-dfsg-clean.sh as helper for uscan to remove non-dfsg-free
       material from the tarball. Adding a get-orig-source rule to debian/rules
@@ -23,7 +24,7 @@ ipython (0.8.2.dfsg-1) UNRELEASED; urgency=low
   * debian/control
     - uniforming Vcs-Browser field
 
- -- Bernd Zeimetz <bzed@debian.org>  Wed, 09 Jan 2008 13:56:17 +0100
+ -- Bernd Zeimetz <bzed@debian.org>  Wed, 09 Jan 2008 14:11:20 +0100
 
 ipython (0.8.1-2) unstable; urgency=low
 
