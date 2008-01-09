@@ -16,6 +16,8 @@ ipython (0.8.2.dfsg-1) UNRELEASED; urgency=low
     - Adding file.
   * debian/patches/{03_ipy_gnuglobal,04_remove_shebang}.dpatch:
     - Updating patches.
+  * debian/patches/05_no_manual_dir.dpatch:
+    - Adding patch to stop setup.py from creating empty directories.
 
   [ Sandro Tosi ]
   * debian/control

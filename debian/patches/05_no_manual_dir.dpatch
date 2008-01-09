@@ -1,0 +1,20 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 05_no_manual_dir.dpatch by Bernd Zeimetz <bzed@debian.org>
+##
+## DP: don't create empty directories
+
+@DPATCH@
+diff -urNad ipython~/setup.py ipython/setup.py
+--- ipython~/setup.py	2008-01-09 14:03:27.000000000 +0100
++++ ipython/setup.py	2008-01-09 14:05:50.000000000 +0100
+@@ -134,10 +134,8 @@
+ 
+ datafiles = [('data', docdirbase, docfiles),
+              ('data', pjoin(docdirbase, 'examples'),examfiles),
+-             ('data', pjoin(docdirbase, 'manual'),manfiles),
+              ('data', manpagebase, manpages),
+              ('lib', 'IPython/UserConfig', cfgfiles),
+-             ('data',pjoin(docdirbase, 'extensions'),igridhelpfiles),
+              ]
+ 
+ if 'setuptools' in sys.modules:
