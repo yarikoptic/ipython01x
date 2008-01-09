@@ -1,2 +1,4 @@
 version=3
-http://ipython.scipy.org/dist/ ipython-(.*)\.tar\.gz
+opts=dversionmangle=s/\.dfsg\.\d+$// \
+    http://ipython.scipy.org/dist/ ipython-(.*)\.tar\.gz debian debian/uscan-dfsg-clean.sh
+

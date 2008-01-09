@@ -1,0 +1,8 @@
+ipython source for Debian
+-------------------------
+
+Ipython's source contains a manual directory which was created by latex2html,
+which needs to be removed as latex2html is not dfsg-free.
+This is automatically done if the source is downloaded using uscan.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Wed, 09 Jan 2008 13:46:24 +0100
