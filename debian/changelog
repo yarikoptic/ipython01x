@@ -12,12 +12,16 @@ ipython (0.8.2.dfsg-1) UNRELEASED; urgency=low
     - Updating Standards-Version to 3.7.3.
   * debian/copyright:
     - Updating the file to reflect the current copyrights and licenses.
+  * debian/patches/00dpatch.conf:
+    - Adding file.
+  * debian/patches/03_ipy_gnuglobal.dpatch:
+    - Updating patch.
 
   [ Sandro Tosi ]
   * debian/control
     - uniforming Vcs-Browser field
 
- -- Bernd Zeimetz <bzed@debian.org>  Wed, 09 Jan 2008 13:46:24 +0100
+ -- Bernd Zeimetz <bzed@debian.org>  Wed, 09 Jan 2008 13:56:17 +0100
 
 ipython (0.8.1-2) unstable; urgency=low
 

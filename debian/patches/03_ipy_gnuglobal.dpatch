@@ -5,8 +5,8 @@
 
 @DPATCH@
 diff -urNad ipython~/IPython/Extensions/ipy_gnuglobal.py ipython/IPython/Extensions/ipy_gnuglobal.py
---- ipython~/IPython/Extensions/ipy_gnuglobal.py	2007-03-25 07:22:14.000000000 +0200
-+++ ipython/IPython/Extensions/ipy_gnuglobal.py	2007-04-24 01:18:12.000000000 +0200
+--- ipython~/IPython/Extensions/ipy_gnuglobal.py	2007-05-25 20:35:34.000000000 +0200
++++ ipython/IPython/Extensions/ipy_gnuglobal.py	2008-01-09 13:55:53.000000000 +0100
 @@ -13,7 +13,7 @@
  import os
  
