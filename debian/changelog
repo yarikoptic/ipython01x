@@ -14,8 +14,8 @@ ipython (0.8.2.dfsg-1) UNRELEASED; urgency=low
     - Updating the file to reflect the current copyrights and licenses.
   * debian/patches/00dpatch.conf:
     - Adding file.
-  * debian/patches/03_ipy_gnuglobal.dpatch:
-    - Updating patch.
+  * debian/patches/{03_ipy_gnuglobal,04_remove_shebang}.dpatch:
+    - Updating patches.
 
   [ Sandro Tosi ]
   * debian/control
