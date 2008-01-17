@@ -1,3 +1,9 @@
+ipython (0.8.2.dfsg-3) UNRELEASED; urgency=low
+
+  * Remove myself from uploaders.
+
+ -- Norbert Tretkowski <nobse@debian.org>  Thu, 17 Jan 2008 23:18:45 +0100
+
 ipython (0.8.2.dfsg-2) unstable; urgency=low
 
   * debian/rules:
