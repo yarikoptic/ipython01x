@@ -18,6 +18,7 @@ install/ipython::
 	for pyvers in $(PYVERS); do \
 	    sed "1s|bin/python|bin/python$$pyvers|" $(CURDIR)/debian/ipython/usr/bin/ipython > \
 	                                            $(CURDIR)/debian/ipython/usr/bin/ipython$$pyvers ;\
+	    ln -s ipython.1.gz $(CURDIR)/debian/ipython/usr/share/man/man1/ipython$$pyvers.1.gz ;\
 	done
 	chmod 755 $(CURDIR)/debian/ipython/usr/bin/ipython*	
 
