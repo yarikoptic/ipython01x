@@ -14,7 +14,7 @@ Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
-Suggests: python-profiler, python-numeric, python-numeric-ext, python-matplotlib
+Suggests: python-profiler, python-numpy, python-matplotlib
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
