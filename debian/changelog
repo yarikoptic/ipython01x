@@ -8,6 +8,11 @@ ipython (0.8.2.dfsg-3) UNRELEASED; urgency=low
     - removed Suggests on python-numeric and added for python-numpy (Closes:
       #478449)
 
+  [ Piotr Ożarowski ]
+  * Replace /usr/bin/ipython with a shell script which detects desired Python
+    version before invoking IPython. Package depends on default Python
+    version only again (Closes: #476661)
+
  -- Sandro Tosi <matrixhasu@gmail.com>  Tue, 29 Apr 2008 19:40:01 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
