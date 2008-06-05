@@ -1,4 +1,4 @@
-ipython (0.8.2.dfsg-3) UNRELEASED; urgency=low
+ipython (0.8.4-1) UNRELEASED; urgency=low
 
   [ Norbert Tretkowski ]
   * Remove myself from uploaders.
@@ -13,7 +13,13 @@ ipython (0.8.2.dfsg-3) UNRELEASED; urgency=low
     Python version before invoking IPython. Package depends on default Python
     version only again (Closes: #476661).
 
- -- Bernd Zeimetz <bzed@debian.org>  Wed, 28 May 2008 00:40:49 +0200
+  [ Bernd Zeimetz ]
+  * New upstream version.
+  * Dropping .dfsg. from the version, the documentation is using python-sphinx
+    now, and included in the source. Also dropping debian/uscan-dfsg-clean.sh
+    and updating debian/watch accordingly.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
 
