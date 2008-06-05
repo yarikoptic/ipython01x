@@ -19,6 +19,14 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
     now, and included in the source. Also dropping debian/uscan-dfsg-clean.sh
     and updating debian/watch accordingly.
 
+  * debian/patches:
+    - dropping the following patches - applied usptream / not needed anymore.
+      01_docdir-base.dpatch
+      02_profiler-message.dpatch
+      05_no_manual_dir.dpatch
+    - updating the following patches:
+      04_remove_shebang.dpatch
+
  -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
