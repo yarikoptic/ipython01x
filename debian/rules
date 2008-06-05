@@ -38,6 +38,5 @@ binary-fixup/ipython::
 	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/Extensions/pickleshare.py
 	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/irunner.py
 	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/external/mglob.py
+	rm -rf $(CURDIR)/debian/ipython/usr/share/doc/ipython/extensions
 
-get-orig-source:
-	uscan --verbose --rename --repack

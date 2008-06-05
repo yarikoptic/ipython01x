@@ -27,6 +27,9 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
     - updating the following patches:
       04_remove_shebang.dpatch
 
+  * debian/rules:
+    - dropping get-orig-source target, not needed anymore.
+
  -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
