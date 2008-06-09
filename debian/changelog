@@ -30,6 +30,9 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
   * debian/rules:
     - dropping get-orig-source target, not needed anymore.
 
+  [ Ondrej Certik ]
+  * standards-version updated to 3.8.0
+
  -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
