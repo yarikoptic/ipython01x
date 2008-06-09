@@ -32,6 +32,7 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
 
   [ Ondrej Certik ]
   * standards-version updated to 3.8.0
+  * DM-Upload-Allowed: yes field added and Ondrej added to Uploaders.
 
  -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
 
