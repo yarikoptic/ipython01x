@@ -1,4 +1,4 @@
-ipython (0.8.4-1) UNRELEASED; urgency=low
+ipython (0.8.4-1) unstable; urgency=low
 
   [ Norbert Tretkowski ]
   * Remove myself from uploaders.
@@ -18,7 +18,6 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
   * Dropping .dfsg. from the version, the documentation is using python-sphinx
     now, and included in the source. Also dropping debian/uscan-dfsg-clean.sh
     and updating debian/watch accordingly.
-
   * debian/patches:
     - dropping the following patches - applied usptream / not needed anymore.
       01_docdir-base.dpatch
@@ -26,7 +25,6 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
       05_no_manual_dir.dpatch
     - updating the following patches:
       04_remove_shebang.dpatch
-
   * debian/rules:
     - dropping get-orig-source target, not needed anymore.
 
@@ -34,7 +32,7 @@ ipython (0.8.4-1) UNRELEASED; urgency=low
   * standards-version updated to 3.8.0
   * DM-Upload-Allowed: yes field added and Ondrej added to Uploaders.
 
- -- Bernd Zeimetz <bzed@debian.org>  Thu, 05 Jun 2008 22:50:59 +0200
+ -- Bernd Zeimetz <bzed@debian.org>  Mon, 09 Jun 2008 23:13:00 +0200
 
 ipython (0.8.2.dfsg-2) unstable; urgency=low
 
