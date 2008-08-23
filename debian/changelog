@@ -1,3 +1,11 @@
+ipython (0.8.4-2) UNRELEASED; urgency=low
+
+  [ Serafeim Zanikolas ]
+  * Remove embedded copy of jquery.js and instead depend on libjs-jquery.
+  * Fix import of path in ipipe.py (Closes: #486923).
+
+ -- Serafeim Zanikolas <serzan@hellug.gr>  Tue, 19 Aug 2008 20:58:31 +0100
+
 ipython (0.8.4-1) unstable; urgency=low
 
   [ Norbert Tretkowski ]

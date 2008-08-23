@@ -12,7 +12,7 @@ DM-Upload-Allowed: yes
 
 Package: ipython
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
+Depends: ${python:Depends}, ${misc:Depends}, python-pexpect, libjs-jquery
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
 Suggests: python-profiler, python-numpy, python-matplotlib
