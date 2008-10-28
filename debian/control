@@ -2,8 +2,9 @@ Source: ipython
 Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Bernd Zeimetz <bzed@debian.org>, Ondrej Certik <ondrej@certik.cz>
-Build-Depends: debhelper (>= 5.0.37.2), dpatch (>= 2.0.10), cdbs (>= 0.4.43), python, python-support (>= 0.4)
+Uploaders: Bernd Zeimetz <bzed@debian.org>, Ondrej Certik <ondrej@certik.cz>,
+	   Stephan Peijnik <debian@sp.or.at>
+Build-Depends: debhelper (>= 5.0.37.2), cdbs (>= 0.4.43), python, python-support (>= 0.4), quilt
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/?op=log
@@ -12,10 +13,11 @@ DM-Upload-Allowed: yes
 
 Package: ipython
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-pexpect, libjs-jquery
+Depends: ${python:Depends}, ${misc:Depends}, python-pexpect, libjs-jquery, python-foolscap (>= 0.3.2)
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
 Suggests: python-profiler, python-numpy, python-matplotlib
+Recommends: python-wxwidgets2.8, 
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific

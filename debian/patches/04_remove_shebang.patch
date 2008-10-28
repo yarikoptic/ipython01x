@@ -1,10 +1,7 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 04_remove_shebang.dpatch by  <Piotr Ożarowski <piotr@debian.org>>
-##
-## DP: remove useless shebang
+Author:  <Piotr Ożarowski <piotr@debian.org>>
+Comment:
+  Remove useless shebang.
 
-@DPATCH@
-diff -urNad ipython~/IPython/Extensions/ipy_gnuglobal.py ipython/IPython/Extensions/ipy_gnuglobal.py
 --- ipython~/IPython/Extensions/ipy_gnuglobal.py	2008-06-05 23:03:50.000000000 +0200
 +++ ipython/IPython/Extensions/ipy_gnuglobal.py	2008-06-05 23:03:50.000000000 +0200
 @@ -1,5 +1,3 @@

@@ -1,10 +1,23 @@
-ipython (0.8.4-2) UNRELEASED; urgency=low
+ipython (0.9.1-1) UNRELEASED; urgency=low
 
+  [ Stephan Peijnik ]
+  * New upstream release.
+  * Cleaned up debian/ because the upstream tarball is clean since 0.8.4-1:
+    - Removed debian/uscan-dfsg-clean.sh.
+    - Removed debian/README.Debian-source.
+    - Updated debian/watch.
+  * Removed debian/patches/05_fix_path_import.dpatch - fixed upstream.
+  * Added myself to Uploaders.
+  * Moved from dpatch to quilt.
+  * Added dependency on python-foolscap.
+  * Wrote manpage for ipcluster.
+  * UNRELEASED - WORK IN PROGRESS.
+  
   [ Serafeim Zanikolas ]
   * Remove embedded copy of jquery.js and instead depend on libjs-jquery.
   * Fix import of path in ipipe.py (Closes: #486923).
 
- -- Serafeim Zanikolas <serzan@hellug.gr>  Tue, 19 Aug 2008 20:58:31 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Tue, 28 Oct 2008 23:22:04 +0100
 
 ipython (0.8.4-1) unstable; urgency=low
 

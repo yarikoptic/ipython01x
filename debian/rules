@@ -4,17 +4,15 @@ DEB_PYTHON_SYSTEM = pysupport
 PYVERS = $(shell pyversions -sv)
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/python-distutils.mk
-include /usr/share/cdbs/1/rules/dpatch.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 install/ipython::
+	# remove test suite script
+	rm $(CURDIR)/debian/ipython/usr/bin/iptest
 	# remove documentation
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/COPYING
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/ChangeLog
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/README_Windows.txt
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/pycon.ico
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/_static/jquery.js
+	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/html/_static/jquery.js
 	ln -s /usr/share/javascript/jquery/jquery.js \
-		$(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/_static/
+		$(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/html/_static/
 
 	# add wrapper scripts for all python versions
 	set -e ;\
@@ -43,3 +41,6 @@ binary-fixup/ipython::
 	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/external/mglob.py
 	rm -rf $(CURDIR)/debian/ipython/usr/share/doc/ipython/extensions
 
+
+# Needed for quilt to work properly.
+clean:: unpatch
