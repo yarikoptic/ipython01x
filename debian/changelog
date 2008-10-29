@@ -11,13 +11,17 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
   * Moved from dpatch to quilt.
   * Added dependency on python-foolscap.
   * Wrote manpage for ipcluster, ipengine and ipcontroller.
+  * Added recommend for global (needed by ipy_gnuglobal IPython extension).
+  * Added debian/patches/06_ipythonwx_importerror.patch.
+    + Provides more usable error message when trying to execute ipython-wx
+    + without python-wxgtk2.8 installed.
   * UNRELEASED - WORK IN PROGRESS.
   
   [ Serafeim Zanikolas ]
   * Remove embedded copy of jquery.js and instead depend on libjs-jquery.
   * Fix import of path in ipipe.py (Closes: #486923).
 
- -- Stephan Peijnik <debian@sp.or.at>  Tue, 28 Oct 2008 23:22:04 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Wed, 29 Oct 2008 11:56:22 +0100
 
 ipython (0.8.4-1) unstable; urgency=low
 
