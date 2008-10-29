@@ -10,7 +10,7 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
   * Added myself to Uploaders.
   * Switched from dpatch to quilt patch system.
   * Added dependency on python-foolscap.
-  * Wrote manpage for ipcluster, ipengine and ipcontroller.
+  * Wrote manpages for ipcluster, ipengine and ipcontroller.
   * Added recommend for global (needed by ipy_gnuglobal IPython extension).
   * Added debian/patches/06_ipythonwx_importerror.patch.
     Provides more usable error message when trying to execute ipython-wx
@@ -30,6 +30,7 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
   * Added final newline to debian/manpages to get rid of a build-warning.
   * Updated debian/rules so parts of the html documentation are not compressed
     and thus rendered unusable.
+  * Wrote manpages for ipythonx and ipython-wx.
   * UNRELEASED - WORK IN PROGRESS.
   
   [ Serafeim Zanikolas ]
