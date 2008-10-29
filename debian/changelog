@@ -1,7 +1,7 @@
 ipython (0.9.1-1) UNRELEASED; urgency=low
 
   [ Stephan Peijnik ]
-  * New upstream release.
+  * New upstream release (Closes: #500556).
   * Cleaned up debian/ because the upstream tarball is clean since 0.8.4-1:
     - Removed debian/uscan-dfsg-clean.sh.
     - Removed debian/README.Debian-source.
