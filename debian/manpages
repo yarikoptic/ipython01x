@@ -1,2 +1,4 @@
 debian/irunner.1
 debian/ipcluster.1
+debian/ipengine.1
+debian/ipcontroller.1
