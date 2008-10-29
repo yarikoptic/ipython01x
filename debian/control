@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Bernd Zeimetz <bzed@debian.org>, Ondrej Certik <ondrej@certik.cz>,
 	   Stephan Peijnik <debian@sp.or.at>
-Build-Depends: debhelper (>= 5.0.37.2), cdbs (>= 0.4.43), python, python-support (>= 0.4), quilt
+Build-Depends: debhelper (>= 5.0.37.2), cdbs (>= 0.4.43), python, python-support (>= 0.4), quilt, python-sphinx, python-pygments, python-foolscap, python-openssl, python-twisted-core, python-nose
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/python-modules/packages/ipython/trunk/?op=log
@@ -17,7 +17,7 @@ Depends: ${python:Depends}, ${misc:Depends}, python-pexpect, libjs-jquery, pytho
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
 Suggests: python-profiler, python-numpy, python-matplotlib
-Recommends: python-wxwidgets2.8, global
+Recommends: python-wxwidgets2.8, global, python-nose, python-openssl (>= 0.6), python-twisted-core
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific

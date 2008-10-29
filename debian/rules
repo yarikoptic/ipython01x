@@ -2,6 +2,10 @@
 # ipython debian/rules file
 DEB_PYTHON_SYSTEM = pysupport
 PYVERS = $(shell pyversions -sv)
+
+# Make sure the html documentation is not compressed and thus stays usable.
+DEB_COMPRESS_EXCLUDE := manual/html/
+
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/python-distutils.mk
 include /usr/share/cdbs/1/rules/patchsys-quilt.mk
