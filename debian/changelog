@@ -9,29 +9,32 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
   * Removed debian/patches/05_fix_path_import.dpatch - fixed upstream.
   * Added myself to Uploaders.
   * Switched from dpatch to quilt patch system.
-  * Added dependency on python-foolscap.
-  * Wrote manpages for ipcluster, ipengine and ipcontroller.
-  * Added recommend for global (needed by ipy_gnuglobal IPython extension).
   * Added debian/patches/06_ipythonwx_importerror.patch.
     Provides more usable error message when trying to execute ipython-wx
     without python-wxgtk2.8 installed.
   * Updated build dependencies and recommends.
-    - Added recommends: 
-      + python-nose
-      + python-openssl
+    - Added depends:
+      + python-foolscap
       + python-twisted-core
-    - Added build dependencies: 
+      + python-zope-interface
+    - Added recommends: 
+      + global (required by ipy_gnuglobal IPython extension)
+      + python-ctypes
+      + python-openssl
+      + python-wxwidgets2.8 (needed by ipythonx and ipython-wx)
+    - Added build dependencies (Build-Depends-Indep): 
       + python-sphinx (needed for building the documentation)
       + python-pygments (needed for syntax highlighting in documentation)
-      + python-foolscap
-      + python-openssl
-      + python-twisted-core
-      + python-nose
+    - Added suggests:
+      + libjs-query (needed by documentation to be searchable)
+      + python-gobject
+      + python-gtk2
+      + python-qt3 | python-qt4
   * Added final newline to debian/manpages to get rid of a build-warning.
   * Updated debian/rules so parts of the html documentation are not compressed
     and thus rendered unusable.
-  * Wrote manpages for ipythonx and ipython-wx.
-  * UNRELEASED - WORK IN PROGRESS.
+  * Wrote manpages for ipcluster, ipcontroller, ipengine, ipythonx and 
+    ipython-wx.
   
   [ Serafeim Zanikolas ]
   * Remove embedded copy of jquery.js and instead depend on libjs-jquery.
