@@ -35,6 +35,8 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
     and thus rendered unusable.
   * Wrote manpages for ipcluster, ipcontroller, ipengine, ipythonx and 
     ipython-wx.
+  * Fixed invalid Recommend on python-wxwidgets2.8 
+    (should have been python-wxgtk2.8 in the first place).
   
   [ Serafeim Zanikolas ]
   * Remove embedded copy of jquery.js and instead depend on libjs-jquery.
@@ -44,7 +46,7 @@ ipython (0.9.1-1) UNRELEASED; urgency=low
   * debian/control
     - switch Vcs-Browser field to viewsvn
 
- -- Stephan Peijnik <debian@sp.or.at>  Wed, 29 Oct 2008 11:56:22 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Wed, 17 Dec 2008 09:51:06 +0100
 
 ipython (0.8.4-1) unstable; urgency=low
 

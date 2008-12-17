@@ -18,7 +18,7 @@ Depends: ${python:Depends}, ${misc:Depends}, python-pexpect, python-foolscap, py
 Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
 Replaces: python2.3-ipython, python2.4-ipython, ipython-common
 Suggests: python-profiler, python-numpy, python-matplotlib, libjs-query, python-gobject, python-gtk2, python-qt3 | python-qt4
-Recommends: python-wxwidgets2.8, global, python-openssl (>= 0.6), python-ctypes
+Recommends: python-wxgtk2.8, global, python-openssl (>= 0.6), python-ctypes
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
