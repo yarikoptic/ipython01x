@@ -24,6 +24,12 @@ ipython (0.9.1-1) experimental; urgency=low
     - Added build dependencies (Build-Depends-Indep): 
       + python-sphinx (needed for building the documentation)
       + python-pygments (needed for syntax highlighting in documentation)
+      + python-foolscap
+      + python-twisted-core
+      + python-zope-interface
+      + python-openssl
+      + python (>= 2.5) | python-ctypes
+      + python-nose
     - Added suggests:
       + libjs-query (needed by documentation to be searchable)
       + python-gobject
@@ -45,7 +51,7 @@ ipython (0.9.1-1) experimental; urgency=low
   * debian/control
     - switch Vcs-Browser field to viewsvn
 
- -- Stephan Peijnik <debian@sp.or.at>  Mon, 29 Dec 2008 18:07:15 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Mon, 29 Dec 2008 18:21:24 +0100
 
 ipython (0.8.4-1) unstable; urgency=low
 
