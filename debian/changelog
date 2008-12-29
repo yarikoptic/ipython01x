@@ -13,15 +13,14 @@ ipython (0.9.1-1) experimental; urgency=low
     Provides more usable error message when trying to execute ipython-wx
     without python-wxgtk2.8 installed.
   * Updated build dependencies and recommends.
-    - Added depends:
+    - Added recommends: 
+      + global (required by ipy_gnuglobal IPython extension)
+      + python (>= 2.5) | python-ctypes
+      + python-openssl
+      + python-wxwidgets2.8 (needed by ipythonx and ipython-wx)
       + python-foolscap
       + python-twisted-core
       + python-zope-interface
-    - Added recommends: 
-      + global (required by ipy_gnuglobal IPython extension)
-      + python-ctypes
-      + python-openssl
-      + python-wxwidgets2.8 (needed by ipythonx and ipython-wx)
     - Added build dependencies (Build-Depends-Indep): 
       + python-sphinx (needed for building the documentation)
       + python-pygments (needed for syntax highlighting in documentation)
@@ -46,7 +45,7 @@ ipython (0.9.1-1) experimental; urgency=low
   * debian/control
     - switch Vcs-Browser field to viewsvn
 
- -- Stephan Peijnik <debian@sp.or.at>  Wed, 17 Dec 2008 09:51:06 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Mon, 29 Dec 2008 18:07:15 +0100
 
 ipython (0.8.4-1) unstable; urgency=low
 
