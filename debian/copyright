@@ -28,9 +28,9 @@ IPython license
 
 IPython is released under a BSD-type license.
 
-Copyright (c) 2001, 2002, 2003, 2004 Fernando Perez <fperez@colorado.edu>.
+Copyright © 2001, 2002, 2003, 2004 Fernando Perez <fperez@colorado.edu>.
 
-Copyright (c) 2001 Janko Hauser <jhauser@zscout.de> and Nathaniel Gray
+Copyright © 2001 Janko Hauser <jhauser@zscout.de> and Nathaniel Gray
 <n8gray@caltech.edu>.
 
 All rights reserved.
@@ -69,14 +69,14 @@ Files with extra copyrights/licenses:
 Unless indicated otherwise, files covered by a BSD-type license, see above.
 
 * IPython/Extensions/InterpreterExec.py:
-  Copyright (C) 2004 W.J. van der Laan <gnufnork@hetdigitalegat.nl>
-  Copyright (C) 2004-2006 Fernando Perez <fperez@colorado.edu>
+  Copyright © 2004 W.J. van der Laan <gnufnork@hetdigitalegat.nl>
+  Copyright © 2004-2006 Fernando Perez <fperez@colorado.edu>
 
 * IPython/Extensions/ipy_constants.py:
   Copyright: Gael Varoquaux <gael.varoquaux@normalesup.org>
 
 * IPython/Extensions/ipy_profile_zope.py:
-  Copyright (c) InQuant GmbH
+  Copyright © InQuant GmbH
   Stefan Eletzhofer <stefan.eletzhofer@inquant.de>
 
 * IPython/external/simplegeneric.py:
@@ -86,15 +86,15 @@ Unless indicated otherwise, files covered by a BSD-type license, see above.
   License: PSF or ZPL, full licenses attached below.
 
 * IPython/DPyGetOpt.py:
-  Copyright (c) 2001 Bill Bumgarner <bbum@friday.com>
+  Copyright © 2001 Bill Bumgarner <bbum@friday.com>
   License: MIT, see below.
 
 * IPython/Debugger.py:
-  Copyright (C) 2001 Python Software Foundation, www.python.org
+  Copyright © 2001 Python Software Foundation, www.python.org
   Taken from Python2.2, License: PSF - see below.
 
 * IPython/wildcard.py:
-  Copyright (C) 2005 Jörgen Stenarson <jorgen.stenarson@bostream.nu>
+  Copyright © 2005 Jörgen Stenarson <jorgen.stenarson@bostream.nu>
 
 * IPython/winconsole.py:
   This file is placed in the public domain.
