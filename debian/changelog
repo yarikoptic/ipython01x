@@ -1,9 +1,8 @@
 ipython (0.9.1-3) unstable; urgency=low
 
   * Fixed broken Suggest on libjs-jquery (typo, was: libjs-query).
-  * Replaced (C) with copyright sign in debian/copyright.
 
- -- Stephan Peijnik <debian@sp.or.at>  Wed, 18 Feb 2009 08:04:44 +0100
+ -- Stephan Peijnik <debian@sp.or.at>  Thu, 19 Feb 2009 07:32:37 +0100
 
 ipython (0.9.1-2) unstable; urgency=low
 
