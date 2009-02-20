@@ -38,11 +38,6 @@ install/ipython::
 	rm -rf $(CURDIR)/debian/ipython/usr/IPython
 
 binary-fixup/ipython::
-	# fix lintian warnings (see also patches/04_remove_shebang.dpatch)
-	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/upgrade_dir.py
-	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/Extensions/pickleshare.py
-	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/irunner.py
-	chmod +x $(CURDIR)/debian/ipython/usr/share/python-support/ipython/IPython/external/mglob.py
 	rm -rf $(CURDIR)/debian/ipython/usr/share/doc/ipython/extensions
 
 

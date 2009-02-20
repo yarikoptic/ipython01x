@@ -1,6 +1,12 @@
 ipython (0.9.1-3) unstable; urgency=low
 
+  [ Stephan Peijnik ]
   * Fixed broken Suggest on libjs-jquery (typo, was: libjs-query).
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/rules: remove chmod calls, they are not needed and are
+    modifying files in pysupport's directories which may change.
+    Closes: #516274.
 
  -- Stephan Peijnik <debian@sp.or.at>  Thu, 19 Feb 2009 07:32:37 +0100
 
