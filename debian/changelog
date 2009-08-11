@@ -1,6 +1,7 @@
-ipython (0.10-1) unstable; urgency=low
+ipython (0.10-1) UNRELEASED; urgency=low
 
-  * New upstream version. 
+  * New upstream version.
+  * FIXME: import ubuntu stuff.
 
  -- Bernd Zeimetz <bzed@debian.org>  Tue, 11 Aug 2009 11:58:36 +0200
 
