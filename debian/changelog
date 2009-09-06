@@ -1,7 +1,12 @@
 ipython (0.10-1) UNRELEASED; urgency=low
 
+  [ Bernd Zeimetz ]
   * New upstream version.
   * FIXME: import ubuntu stuff.
+
+  [ Stefano Zacchiroli ]
+  * debian/control: fix (build)deps on python-zope-interface, new package
+    name is python-zope.interface (Closes: #543128)
 
  -- Bernd Zeimetz <bzed@debian.org>  Tue, 11 Aug 2009 11:58:36 +0200
 
