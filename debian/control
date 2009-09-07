@@ -9,7 +9,7 @@ Build-Depends-Indep: python-sphinx, python-pygments, python-foolscap, python-ope
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/ipython/trunk/
-Standards-Version: 3.8.0
+Standards-Version: 3.8.3
 DM-Upload-Allowed: yes
 
 Package: ipython
