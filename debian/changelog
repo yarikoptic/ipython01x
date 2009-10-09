@@ -1,3 +1,10 @@
+ipython (0.10-2) UNRELEASED; urgency=low
+
+  * debian/control
+    - removed Ondrej from Uploaders: thanks for your work!
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 09 Oct 2009 22:52:42 +0200
+
 ipython (0.10-1) unstable; urgency=medium
 
   [ Bernd Zeimetz ]
