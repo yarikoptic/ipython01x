@@ -1,3 +1,4 @@
 version=3
-http://ipython.scipy.org/dist/ ipython-(.*)\.tar\.gz 
+http://ipython.scipy.org/moin/Download \
+http://ipython.scipy.org/dist/.*/ipython-(.*)\.tar\.gz 
 

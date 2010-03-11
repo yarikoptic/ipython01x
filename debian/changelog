@@ -1,7 +1,11 @@
 ipython (0.10-2) UNRELEASED; urgency=low
 
+  [ Sandro Tosi ]
   * debian/control
     - removed Ondrej from Uploaders: thanks for your work!
+
+  [ Jakub Wilk ]
+  * Fix watch file.
 
  -- Sandro Tosi <morph@debian.org>  Fri, 09 Oct 2009 22:52:42 +0200
 
