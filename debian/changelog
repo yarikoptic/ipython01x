@@ -1,4 +1,4 @@
-ipython (0.10-2) UNRELEASED; urgency=low
+ipython (0.10-2) unstable; urgency=low
 
   [ Sandro Tosi ]
   * debian/control
@@ -7,7 +7,10 @@ ipython (0.10-2) UNRELEASED; urgency=low
   [ Jakub Wilk ]
   * Fix watch file.
 
- -- Sandro Tosi <morph@debian.org>  Fri, 09 Oct 2009 22:52:42 +0200
+  [ Bernd Zeimetz ]
+  * Upload to ship ipython2.6 instead of ipython2.4.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 25 Apr 2010 14:53:21 +0200
 
 ipython (0.10-1) unstable; urgency=medium
 
