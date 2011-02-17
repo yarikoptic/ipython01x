@@ -3,7 +3,7 @@ Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Bernd Zeimetz <bzed@debian.org>, Stephan Peijnik <debian@sp.or.at>
-Build-Depends: debhelper (>= 7.3.13), python, quilt (>= 0.46-5)
+Build-Depends: debhelper (>= 7.3.13), python, quilt (>= 0.46-7~)
 Build-Depends-Indep: python-sphinx, python-pygments, python-foolscap, python-openssl (>= 0.6), python-nose, python-twisted-core, python-zope.interface, python-pexpect, python (>= 2.5) | python-ctypes
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
