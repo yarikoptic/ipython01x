@@ -1,8 +1,10 @@
 ipython (0.10.1-1) unstable; urgency=low
 
   * New upstream release.
+  * Bumping Standards-Version to 3.9.1, no changes needed.
+  * Migrating to dh and dh_python2. 
 
- -- Bernd Zeimetz <bzed@debian.org>  Sun, 25 Apr 2010 15:10:11 +0200
+ -- Bernd Zeimetz <bzed@debian.org>  Thu, 17 Feb 2011 17:49:42 +0100
 
 ipython (0.10-2) unstable; urgency=low
 

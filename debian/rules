@@ -1,16 +1,16 @@
 #!/usr/bin/make -f
-# ipython debian/rules file
-DEB_PYTHON_SYSTEM = pysupport
 PYVERS = $(shell pyversions -sv)
 
-# Make sure the html documentation is not compressed and thus stays usable.
-DEB_COMPRESS_EXCLUDE := manual/html/
+override_dh_compress:
+	# make sure the documentation stays usable.
+	dh_compress -Xmanual/html/
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/python-distutils.mk
-include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+%:
+	dh $@ --with quilt,python2
 
-install/ipython::
+override_dh_auto_install:
+	dh_auto_install
+
 	# remove test suite script
 	rm $(CURDIR)/debian/ipython/usr/bin/iptest
 	# remove documentation
@@ -37,9 +37,6 @@ install/ipython::
 	# removing bogus usr/IPython directory
 	rm -rf $(CURDIR)/debian/ipython/usr/IPython
 
-binary-fixup/ipython::
 	rm -rf $(CURDIR)/debian/ipython/usr/share/doc/ipython/extensions
 
 
-# Needed for quilt to work properly.
-clean:: unpatch
