@@ -2,9 +2,18 @@ Source: ipython
 Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Stephan Peijnik <debian@sp.or.at>, Julian Taylor <jtaylor.debian@googlemail.com>
+Uploaders: Stephan Peijnik <debian@sp.or.at>,
+           Julian Taylor <jtaylor.debian@googlemail.com>
 Build-Depends: debhelper (>= 7.3.13), python, quilt (>= 0.46-7~)
-Build-Depends-Indep: python-sphinx, python-pygments, python-foolscap, python-openssl (>= 0.6), python-nose, python-twisted-core, python-zope.interface, python-pexpect, python (>= 2.5) | python-ctypes
+Build-Depends-Indep: python (>= 2.5) | python-ctypes,
+                     python-foolscap,
+                     python-nose,
+                     python-openssl (>= 0.6),
+                     python-pexpect,
+                     python-pygments,
+                     python-sphinx,
+                     python-twisted-core,
+                     python-zope.interface
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/ipython/trunk/
@@ -13,11 +22,23 @@ DM-Upload-Allowed: yes
 
 Package: ipython
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-pexpect
-Conflicts: python2.3-ipython, python2.4-ipython, ipython-common
-Replaces: python2.3-ipython, python2.4-ipython, ipython-common
-Suggests: python-profiler, python-numpy, python-matplotlib, libjs-jquery, python-gobject, python-gtk2, python-qt3 | python-qt4
-Recommends: python-wxgtk2.8, global, python-openssl (>= 0.6), python (>= 2.5) | python-ctypes, python-foolscap, python-zope.interface, python-twisted-core
+Depends: python-pexpect, ${misc:Depends}, ${python:Depends}
+Conflicts: ipython-common, python2.3-ipython, python2.4-ipython
+Replaces: ipython-common, python2.3-ipython, python2.4-ipython
+Suggests: libjs-jquery,
+          python-gobject,
+          python-gtk2,
+          python-matplotlib,
+          python-numpy,
+          python-profiler,
+          python-qt3 | python-qt4
+Recommends: global,
+            python (>= 2.5) | python-ctypes,
+            python-foolscap,
+            python-openssl (>= 0.6),
+            python-twisted-core,
+            python-wxgtk2.8,
+            python-zope.interface
 Breaks: ${python:Breaks}
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
