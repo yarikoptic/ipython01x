@@ -2,20 +2,8 @@ Author: Julian Taylor <jtaylor.debian@googlemail.com>
 Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/ipython/+bug/241535
 Subject: use LightBG colorscheme by default
  Linux scheme leads to invisible text when console background is light
+ LightBG is at least readable with dark background
 
-Index: ipython/IPython/UserConfig/ipy_user_conf.py
-===================================================================
---- ipython.orig/IPython/UserConfig/ipy_user_conf.py	2011-04-21 17:54:49.858160694 +0200
-+++ ipython/IPython/UserConfig/ipy_user_conf.py	2011-04-21 17:54:58.658160688 +0200
-@@ -68,7 +68,7 @@
-     
-     # Try one of these color settings if you can't read the text easily
-     # autoexec is a list of IPython commands to execute on startup
--    #o.autoexec.append('%colors LightBG')
-+    o.autoexec.append('%colors LightBG')
-     #o.autoexec.append('%colors NoColor')
-     #o.autoexec.append('%colors Linux')
-     
 Index: ipython/IPython/UserConfig/ipythonrc
 ===================================================================
 --- ipython.orig/IPython/UserConfig/ipythonrc	2011-04-21 17:55:33.928160670 +0200
