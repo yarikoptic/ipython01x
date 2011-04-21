@@ -6,6 +6,7 @@ ipython (0.10.2-1) unstable; urgency=low
     thank you for your work
   * Use environment python interpreter. Closes: #547003
   * wrap-and-sort debian/
+  * update standard to 3.9.2. no changes needed
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 21 Apr 2011 14:54:20 +0200
 

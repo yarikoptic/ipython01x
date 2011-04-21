@@ -17,7 +17,7 @@ Build-Depends-Indep: python (>= 2.5) | python-ctypes,
 Homepage: http://ipython.scipy.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/ipython/trunk/
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 DM-Upload-Allowed: yes
 
 Package: ipython
