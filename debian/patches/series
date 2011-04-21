@@ -2,3 +2,4 @@
 04_remove_shebang.patch
 05_fix_seteditor_example.patch
 06_ipythonwx_importerror.patch
+07_use_lightbg.patch

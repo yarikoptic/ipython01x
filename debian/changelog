@@ -7,6 +7,7 @@ ipython (0.10.2-1) unstable; urgency=low
   * Use environment python interpreter. Closes: #547003
   * wrap-and-sort debian/
   * update standard to 3.9.2. no changes needed
+  * set default colorscheme to LightBG. LP: #241535
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 21 Apr 2011 14:54:20 +0200
 
