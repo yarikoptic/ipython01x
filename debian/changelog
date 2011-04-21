@@ -9,6 +9,7 @@ ipython (0.10.2-1) unstable; urgency=low
   * update standard to 3.9.2. no changes needed
   * set default colorscheme to LightBG. LP: #241535
   * converted copyright to DEP5
+  * control: removed python:Breaks
 
  -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 21 Apr 2011 14:54:20 +0200
 

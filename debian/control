@@ -39,7 +39,6 @@ Recommends: global,
             python-twisted-core,
             python-wxgtk2.8,
             python-zope.interface
-Breaks: ${python:Breaks}
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
