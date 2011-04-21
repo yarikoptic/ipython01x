@@ -1,3 +1,12 @@
+ipython (0.10.2-1) unstable; urgency=low
+
+  * new upstream release. Closes: #622643
+  * added Julian Taylor <jtaylor.debian@googlemail.com> to uploaders
+  * removed Bernd Zeimetz <bzed@debian.org> from uploaders
+    thank you for your work
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 21 Apr 2011 14:54:20 +0200
+
 ipython (0.10.1-1) unstable; urgency=low
 
   * New upstream release.
