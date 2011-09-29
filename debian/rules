@@ -40,7 +40,7 @@ override_dh_install:
 
 	# remove embedded arparse
 	find $(CURDIR)/debian/ipython/usr/ -name _argparse.py -delete
-	
+
 	# remove embedded configobj
 	find $(CURDIR)/debian/ipython/usr/ -name _configobj.py -delete
 	find $(CURDIR)/debian/ipython/usr/ -name _validate.py -delete
@@ -72,7 +72,7 @@ override_dh_install:
 
 	# change permission on scripts
 	chmod a-x $(CURDIR)/debian/ipython/usr/share/doc/ipython/examples/*
-	
+
 override_dh_installdocs:
 ifeq (,$(filter nodocs,$(DEB_BUILD_OPTIONS)))
 	dh_installdocs -pipython
