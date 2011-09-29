@@ -1,7 +1,8 @@
-Source: ipython
+Source: ipython01x
 Section: python
 Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Abuser: Yaroslav Halchenko <debian@onerussian.com>
 Uploaders: Stephan Peijnik <debian@sp.or.at>,
            Julian Taylor <jtaylor.debian@googlemail.com>
 Build-Depends: debhelper (>= 7.3.13)
@@ -30,7 +31,7 @@ Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/ipython/trunk
 Standards-Version: 3.9.2
 DM-Upload-Allowed: yes
 
-Package: ipython
+Package: ipython01x
 Architecture: all
 Depends: python-argparse,
          python-configobj,
@@ -41,9 +42,9 @@ Depends: python-argparse,
          ${python:Depends}
 Conflicts: ipython-common, python2.3-ipython, python2.4-ipython
 Replaces: ipython-common, python2.3-ipython, python2.4-ipython
-Suggests: ipython-doc,
-          ipython-parallel,
-          ipython-qtconsole,
+Suggests: ipython01x-doc,
+          ipython01x-parallel,
+          ipython01x-qtconsole,
           python-gobject,
           python-gtk2,
           python-matplotlib,
@@ -58,10 +59,14 @@ Description: enhanced interactive Python shell
  session logging, session restoring, complete system shell access,
  verbose and colored traceback reports, auto-parentheses, auto-quoting,
  and is embeddable in other Python programs.
+ .
+ This is a non-official, custom build of IPython post 0.11 with
+ workbooks support.  It provides IPython01X module thus not
+ conflicting with system-wide installed IPython
 
-Package: ipython-qtconsole
+Package: ipython01x-qtconsole
 Architecture: all
-Depends: ipython (= ${binary:Version}),
+Depends: ipython01x (= ${binary:Version}),
          python-pygments,
          python-qt4,
          python-zmq (>= 2.0.10.1),
@@ -79,9 +84,9 @@ Description: enhanced interactive Python shell
  .
  This package contains the qt console.
 
-Package: ipython-parallel
+Package: ipython01x-parallel
 Architecture: all
-Depends: ipython (= ${binary:Version}),
+Depends: ipython01x (= ${binary:Version}),
          python-zmq (>= 2.1.4),
          ${misc:Depends},
          ${python:Depends}
@@ -98,8 +103,12 @@ Description: enhanced interactive Python shell
  and is embeddable in other Python programs.
  .
  This package contains the parallel processing facilities.
+ .
+ This is a non-official, custom build of IPython post 0.11 with
+ workbooks support.  It provides IPython01X module thus not
+ conflicting with system-wide installed IPython
 
-Package: ipython-doc
+Package: ipython01x-doc
 Section: doc
 Architecture: all
 Depends: libjs-jquery, ${misc:Depends}
@@ -114,3 +123,7 @@ Description: enhanced interactive Python shell
  and is embeddable in other Python programs.
  .
  This package contains the documentation.
+ .
+ This is a non-official, custom build of IPython post 0.11 with
+ workbooks support.  It provides IPython01X module thus not
+ conflicting with system-wide installed IPython
