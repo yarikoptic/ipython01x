@@ -84,3 +84,22 @@ endif
 override_dh_installexamples:
 	dh_installexamples -pipython --exclude="examples/newparallel/"
 	dh_installexamples -pipython-parallel
+
+# Perform all evil 01X renaming within dh_usrlocal
+override_dh_usrlocal:
+	: # and here we are
+	: # The Module
+	{ /usr/bin/find debian/ipy* -name IPython | \
+		while read d; do mv $$d $${d}01X; done; }
+	: # misc dirs
+	{ /usr/bin/find debian/ipy* -mindepth 2 -name ipython\* -type d | \
+		while read d; do mv $$d $${d/ipython/ipython01x}; done; }
+	: # man pages
+	{ /usr/bin/find debian/ipy* -path *man1/\* | \
+		while read d; do mv $$d $${d/.1.gz/01x.1.gz}; done; }
+	: # desktop files
+	{ /usr/bin/find debian/ipy* -path *.desktop | \
+		while read d; do mv $$d $${d/.desktop/01x.desktop}; done; }
+	: # binaries
+	{ /usr/bin/find debian/ipy* -path *bin/\* | \
+		while read d; do mv $$d $${d}01x; done; }
