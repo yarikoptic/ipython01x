@@ -1,0 +1,10 @@
+Document: ipython-doc
+Title: IPython Manual
+Author: IPython developers
+Abstract: This manual describes what ipython is
+ and how to use its many features.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/ipython/html/index.html
+Files: /usr/share/doc/ipython/html/*

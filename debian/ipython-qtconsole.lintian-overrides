@@ -1,0 +1,2 @@
+# "ipython" is provided by the binary package ipython on which this package depends
+ipython-qtconsole binary: desktop-command-not-in-package usr/share/applications/ipython-qtconsole.desktop ipython

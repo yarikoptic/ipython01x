@@ -1,3 +1,65 @@
+ipython (0.11-1) experimental; urgency=low
+
+  * New upstream release
+  * install all upstream manpages
+  * debian/copyright: refer to LGPL-2.1 instead of LGPL symlink
+  * install .desktop files for ipython and ipython-qtconsole
+    - override desktop-command-not-in-package lintian warning for -qtconsole
+      the command is in ipython package on which -qtconsole depends
+  * debian/control: update homepage
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 31 Jul 2011 21:14:03 +0200
+
+ipython (0.11~rc4-1) experimental; urgency=low
+
+  * New upstream release candidate
+  * update patch for debian specific error messages
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 19 Jul 2011 12:15:23 +0200
+
+ipython (0.11~rc3-1) experimental; urgency=low
+
+  * New upstream release candidate
+  * fix some DEP5 syntax errors
+  * remove upstreamed testsuite-fix patch
+  * delete disabled obsolete patches 03, 04, 06
+  * move parallel binaries from ipython to ipython-parallel
+  * remove obsolete manpages debian/ipythonx.1 and debian/ipython-wx.1
+  * install parallel manpages only in -parallel package
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 17 Jul 2011 16:09:01 +0200
+
+ipython (0.11~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate
+  * change to source format 3.0 (quilt)
+  * run testsuite during build
+  * add clean target
+  * build-depends:
+    - matplotlib, pymongo, xauth, xvfb and qt4 for tests
+    - graphviz, sphinx for docs
+  * add dependencies and don't install embedded copy:
+    - python-argparse(Closes: #555348)
+    - python-configobj (Closes: #555339)
+    - python-simplegeneric
+    - python-decorator
+    - python-pyparsing
+    - pexpect
+  * update patches
+    - disabled obsolete patches 03, 04 and 06
+    - refresh default background color patch 07
+    - add patch to fix testsuite
+    - add patch to improve error message on missing ipython-qtconsole
+  * change to compat 7
+  * split out -parallel package
+  * split out -qtconsole package
+  * split out -doc package
+  * improve dependencies for each package
+  * add doc-base control file
+  * fix the ipythonX.Y startup scripts
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 10 May 2011 16:18:45 +0200
+
 ipython (0.10.2-1) unstable; urgency=low
 
   * new upstream release. Closes: #622643

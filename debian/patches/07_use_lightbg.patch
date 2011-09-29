@@ -4,31 +4,16 @@ Subject: use LightBG colorscheme by default
  Linux scheme leads to invisible text when console background is light
  LightBG is at least readable with dark background
 
-Index: ipython/IPython/UserConfig/ipythonrc
+Index: trunk/IPython/core/interactiveshell.py
 ===================================================================
---- ipython.orig/IPython/UserConfig/ipythonrc	2011-04-21 17:55:33.928160670 +0200
-+++ ipython/IPython/UserConfig/ipythonrc	2011-04-21 17:55:40.068160666 +0200
-@@ -163,8 +163,8 @@
- # in light background terminals.
+--- trunk.orig/IPython/core/interactiveshell.py	2011-06-23 10:55:25.000000000 +0200
++++ trunk/IPython/core/interactiveshell.py	2011-06-23 10:58:33.033373573 +0200
+@@ -119,7 +119,7 @@
+     elif os.name=='nt':
+         return 'Linux'
+     else:
+-        return 'Linux'
++        return 'LightBG'
  
- # keep uncommented only the one you want:
--colors Linux
--#colors LightBG
-+#colors Linux
-+colors LightBG
- #colors NoColor
  
- ########################
-Index: ipython/IPython/Extensions/ipy_defaults.py
-===================================================================
---- ipython.orig/IPython/Extensions/ipy_defaults.py	2011-04-21 18:07:16.368160277 +0200
-+++ ipython/IPython/Extensions/ipy_defaults.py	2011-04-21 18:07:21.588160275 +0200
-@@ -18,7 +18,7 @@
- 
- o = ip.options
- 
--o.colors = "Linux"
-+o.colors = "LightBG"
- o.color_info=1
- o.confirm_exit=1
- o.pprint=1
+ class SeparateUnicode(Unicode):

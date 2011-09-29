@@ -1,25 +1,61 @@
 #!/usr/bin/make -f
-PYVERS = $(shell pyversions -sv)
+export DH_VERBOSE=1
+PYVERS = $(shell pyversions -rv)
 
 override_dh_compress:
 	# make sure the documentation stays usable.
-	dh_compress -Xmanual/html/
+	dh_compress -Xhtml/
 
 %:
-	dh $@ --with quilt,python2
+	dh $@ --with python2
+
+override_dh_auto_clean:
+	rm -f test_hist.sqlite
+	if cd $(CURDIR)/docs; then $(MAKE) clean; fi
+	dh_auto_clean
 
 override_dh_auto_build:
 	dh_auto_build -- --executable '/usr/bin/env python'
+ifeq (,$(filter nodocs,$(DEB_BUILD_OPTIONS)))
+	PYTHONPATH=$(CURDIR) $(MAKE) -C $(CURDIR)/docs html
+endif
 
-override_dh_auto_install:
-	dh_auto_install
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	# IPython.frontend requires X
+	# temporary ignore failure in experimental, parallel testsuite fails randomly
+	-set -e && for pyvers in $(PYVERS); do \
+	  LC_ALL=C.UTF-8 PATH=$(CURDIR)/IPython/scripts/:$(PATH) PYTHONPATH=$(CURDIR) xvfb-run -s "-screen 0 1280x1024x24 -noreset" \
+	  python$$pyvers $(CURDIR)/IPython/scripts/iptest -v; \
+	done
+endif
 
-	# remove test suite script
-	rm $(CURDIR)/debian/ipython/usr/bin/iptest
-	# remove documentation
-	rm $(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/html/_static/jquery.js
-	ln -s /usr/share/javascript/jquery/jquery.js \
-		$(CURDIR)/debian/ipython/usr/share/doc/ipython/manual/html/_static/
+override_dh_install:
+	dh_install -pipython --exclude="IPython/parallel/" \
+		--exclude="IPython/frontend/qt/" \
+		--exclude="IPython/deathrow/" \
+		--exclude="IPython/quarantine/"
+	dh_install -pipython-parallel IPython/parallel/ usr/share/pyshared/IPython
+	dh_install -pipython-qtconsole IPython/frontend/qt/ usr/share/pyshared/IPython/frontend
+
+	# remove embedded arparse
+	find $(CURDIR)/debian/ipython/usr/ -name _argparse.py -delete
+	
+	# remove embedded configobj
+	find $(CURDIR)/debian/ipython/usr/ -name _configobj.py -delete
+	find $(CURDIR)/debian/ipython/usr/ -name _validate.py -delete
+
+	# remove embedded simplegeneric
+	find $(CURDIR)/debian/ipython/usr/ -name _simplegeneric.py -delete
+
+	# remove embedded decorator
+	find $(CURDIR)/debian/ipython/usr/ -name _decorator.py -delete
+
+	# remove embedded pexpect
+	find $(CURDIR)/debian/ipython/usr/ -name _pexpect.py -delete
+
+	# remove embedded pyparsing
+	find $(CURDIR)/debian/ipython/usr/ -name _pyparsing.py -delete
 
 	# add wrapper scripts for all python versions
 	set -e ;\
@@ -37,9 +73,14 @@ override_dh_auto_install:
 	# change permission on scripts
 	chmod a-x $(CURDIR)/debian/ipython/usr/share/doc/ipython/examples/*
 	
-	# removing bogus usr/IPython directory
-	rm -rf $(CURDIR)/debian/ipython/usr/IPython
+override_dh_installdocs:
+ifeq (,$(filter nodocs,$(DEB_BUILD_OPTIONS)))
+	dh_installdocs -pipython
+	dh_installdocs -pipython-parallel --link-doc=ipython
+	dh_installdocs -pipython-qtconsole --link-doc=ipython
+	dh_installdocs -pipython-doc --link-doc=ipython
+endif
 
-	rm -rf $(CURDIR)/debian/ipython/usr/share/doc/ipython/extensions
-
-
+override_dh_installexamples:
+	dh_installexamples -pipython --exclude="examples/newparallel/"
+	dh_installexamples -pipython-parallel

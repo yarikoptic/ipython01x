@@ -4,17 +4,27 @@ Priority: optional
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Stephan Peijnik <debian@sp.or.at>,
            Julian Taylor <jtaylor.debian@googlemail.com>
-Build-Depends: debhelper (>= 7.3.13), python, quilt (>= 0.46-7~)
-Build-Depends-Indep: python (>= 2.5) | python-ctypes,
-                     python-foolscap,
+Build-Depends: debhelper (>= 7.3.13)
+Build-Depends-Indep: graphviz,
+                     python-all (>= 2.6.6-3~),
+                     python-argparse,
+                     python-configobj,
+                     python-decorator,
+                     python-matplotlib,
                      python-nose,
-                     python-openssl (>= 0.6),
                      python-pexpect,
                      python-pygments,
+                     python-pymongo,
+                     python-pyparsing,
+                     python-qt4,
+                     python-simplegeneric,
                      python-sphinx,
-                     python-twisted-core,
-                     python-zope.interface
-Homepage: http://ipython.scipy.org/
+                     python-wxgtk2.8,
+                     python-zmq (>= 2.1.4),
+                     xauth,
+                     xvfb
+X-Python-Version: >= 2.6
+Homepage: http://ipython.org/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/ipython/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/ipython/trunk/
 Standards-Version: 3.9.2
@@ -22,23 +32,23 @@ DM-Upload-Allowed: yes
 
 Package: ipython
 Architecture: all
-Depends: python-pexpect, ${misc:Depends}, ${python:Depends}
+Depends: python-argparse,
+         python-configobj,
+         python-decorator,
+         python-pexpect,
+         python-simplegeneric,
+         ${misc:Depends},
+         ${python:Depends}
 Conflicts: ipython-common, python2.3-ipython, python2.4-ipython
 Replaces: ipython-common, python2.3-ipython, python2.4-ipython
-Suggests: libjs-jquery,
+Suggests: ipython-doc,
+          ipython-parallel,
+          ipython-qtconsole,
           python-gobject,
           python-gtk2,
           python-matplotlib,
           python-numpy,
-          python-profiler,
-          python-qt3 | python-qt4
-Recommends: global,
-            python (>= 2.5) | python-ctypes,
-            python-foolscap,
-            python-openssl (>= 0.6),
-            python-twisted-core,
-            python-wxgtk2.8,
-            python-zope.interface
+          python-profiler
 Description: enhanced interactive Python shell
  IPython can be used as a replacement for the standard Python shell,
  or it can be used as a complete working environment for scientific
@@ -48,3 +58,59 @@ Description: enhanced interactive Python shell
  session logging, session restoring, complete system shell access,
  verbose and colored traceback reports, auto-parentheses, auto-quoting,
  and is embeddable in other Python programs.
+
+Package: ipython-qtconsole
+Architecture: all
+Depends: ipython (= ${binary:Version}),
+         python-pygments,
+         python-qt4,
+         python-zmq (>= 2.0.10.1),
+         ${misc:Depends},
+         ${python:Depends}
+Description: enhanced interactive Python shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the qt console.
+
+Package: ipython-parallel
+Architecture: all
+Depends: ipython (= ${binary:Version}),
+         python-zmq (>= 2.1.4),
+         ${misc:Depends},
+         ${python:Depends}
+Conflicts: ipython-common, python2.3-ipython, python2.4-ipython
+Replaces: ipython-common, python2.3-ipython, python2.4-ipython
+Description: enhanced interactive Python shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the parallel processing facilities.
+
+Package: ipython-doc
+Section: doc
+Architecture: all
+Depends: libjs-jquery, ${misc:Depends}
+Description: enhanced interactive Python shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the documentation.

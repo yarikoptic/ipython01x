@@ -1,0 +1,38 @@
+From: Julian Taylor <jtaylor.debian@googlemail.com>
+Date: Thu, 7 Jul 2011 18:19:04 +0200
+Subject: debianize error messages
+Forwarded: not-needed
+
+Index: trunk/IPython/scripts/ipython
+===================================================================
+--- trunk.orig/IPython/scripts/ipython	2011-07-19 12:10:40.916829075 +0200
++++ trunk/IPython/scripts/ipython	2011-07-19 12:11:06.836829059 +0200
+@@ -4,4 +4,8 @@
+ 
+ from IPython.frontend.terminal.ipapp import launch_new_instance
+ 
+-launch_new_instance()
++try:
++  launch_new_instance()
++except ImportError as e:
++  if "qt.console.qtconsoleapp" in e.message:
++    print "Could not start qtconsole. Please install ipython-qtconsole"
+Index: trunk/IPython/zmq/__init__.py
+===================================================================
+--- trunk.orig/IPython/zmq/__init__.py	2011-07-19 12:11:20.136829049 +0200
++++ trunk/IPython/zmq/__init__.py	2011-07-19 12:12:00.956829023 +0200
+@@ -16,12 +16,12 @@
+ try:
+     import zmq
+ except ImportError:
+-    raise ImportError("IPython.zmq requires pyzmq >= %s"%minimum_pyzmq_version)
++    raise ImportError("IPython.zmq requires python-zmq >= %s"%minimum_pyzmq_version)
+ 
+ pyzmq_version = zmq.__version__
+ 
+ if pyzmq_version < minimum_pyzmq_version:
+-    raise ImportError("IPython.zmq requires pyzmq >= %s, but you have %s"%(
++    raise ImportError("IPython.zmq requires python-zmq >= %s, but you have %s"%(
+                     minimum_pyzmq_version, pyzmq_version))
+ 
+ del pyzmq_version

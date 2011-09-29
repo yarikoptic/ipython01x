@@ -1,63 +1,119 @@
-Format: http://dep.debian.net/deps/dep5/
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=174
 Upstream-Name: IPython
+Upstream-Contact: ipython-dev@scipy.org
 Source: http://ipython.scipy.org/
-Comment: This package was debianized by Jack Moffitt <jack@xiph.org> on Wed, 12 Mar 2003 20:38:14 -0700.
 
 Files: *
-Copyright: 2008, IPython Development Team
+Copyright: 2005,2008,2009,2010,2011 The IPython Development Team
+ 2001-2007, Fernando Perez <fperez@colorado.edu>
+ 2001, Janko Hauser <jhauser@zscout.de>
+ 2001, Nathaniel Gray <n8gray@caltech.edu>
+ 2002-2005, Alexander Schmolck
+ 2004, W.J. van der Laan <gnufnork@hetdigitalegat.nl>
+ 2001, Python Software Foundation, www.python.org
+ 2009, Gael Varoquaux (gael.varoquaux@normalesup.org)
+ 2005, Jörgen Stenarson <jorgen.stenarson@bostream.nu>
 License: BSD-3-clause
 
-Files: IPython/Extensions/InterpreterExec.py
-Copyright: 2004 W.J. van der Laan <gnufnork@hetdigitalegat.nl>
-           2004-2006 Fernando Perez <fperez@colorado.edu>
-License: BSD-3-clause
+Files: ./IPython/external/argparse/_argparse.py
+Copyright: 2006-2009, Steven J. Bethard <steven.bethard@gmail.com>
+License: Apache-2.0
 
-Files: IPython/Extensions/ipy_constants.py
-Copyright: Gael Varoquaux <gael.varoquaux@normalesup.org>
-License: BSD-3-clause
+Files: ./IPython/external/ssh/forward.py
+Copyright: 2003-2007, Robey Pointer <robeypointer@gmail.com>
+ 2010, The IPython Development Team
+License: LGPL-2.1+
 
-Files: IPython/Extensions/ipy_profile_zope.py
-Copyright: InQuant GmbH
-License: BSD-3-clause
-
-Files: IPython/external/simplegeneric.py
-Copyright: Phillip J. Eby
-License: PSF or ZPL
-Comment: This is version 0.6 of Philip J. Eby's simplegeneric module
-Comment:  (http://cheeseshop.python.org/pypi/simplegeneric) patched to work
-Comment:  with Python 2.3 (which doesn't support assigning to __name__)
-
-Files: IPython/DPyGetOpt.py
-Copyright: 2001, Bill Bumgarner <bbum@friday.com>
-License: MIT
-
-Files: IPython/external/Itpl.py
+Files: ./IPython/deathrow/Itpl.py
+ ./IPython/external/Itpl/_Itpl.py
 Copyright: 2001, Ka-Ping Yee <ping@lfw.org>
-License: MIT
+License: MIT-X11-BSD-like
 
-Files: IPython/Extensions/ipy_bzr.py
-Copyright: 2004, 2005, Aaron Bentley
-License: GPL-2+
+Files: ./IPython/external/guid/_guid.py
+Copyright: 2006, Conan C. Albrecht
+License: MIT-X11-BSD-like
 
-Files: IPython/Debugger.py
+Files: ./IPython/external/pyparsing/_pyparsing.py
+Copyright: 2003-2009, Paul T. McGuire
+License: MIT-X11-BSD-like
+
+Files: ./IPython/external/pexpect/_pexpect.py
+Copyright: 2008, Noah Spurrier
+License: MIT-X11-BSD-like
+
+Files: ./IPython/deathrow/oldfrontend/process/winprocess.py
+ ./IPython/deathrow/oldfrontend/process/killableprocess.py
+Copyright: 2006, the Mozilla Foundation <http://www.mozilla.org>
+ 2003-2004, Peter Astrand <astrand@lysator.liu.se>
+License: MIT-X11-BSD-like
+
+Files: ./IPython/utils/daemonize.py
+Copyright: Twisted Matrix Laboratories
+License: MIT-X11-BSD-like
+
+Files: ./IPython/core/debugger.py
 Copyright: 2001, Python Software Foundation, www.python.org
+ 2005-2006, Fernando Perez. <fperez@colorado.edu>
 License: PSF
 
-Files: IPython/wildcard.py
-Copyright: 2005, Jörgen Stenarson <jorgen.stenarson@bostream.nu>
-License: BSD-3-clause
-
-Files: IPython/external/argparse.py
-Copyright:  2006-2009, Steven J. Bethard <steven.bethard@gmail.com>
+Files: ./IPython/deathrow/gui/wx/ipython_view.py
+Copyright: 2007, IBM Corporation
 License: BSD-2-clause
 
-Files: IPython/winconsole.py
-License: public-domain
+Files: ./IPython/deathrow/ipy_profile_zope.py
+Copyright: InQuant GmbH
+License: BSD-2-clause
 
+Files: ./IPython/external/decorator/_decorator.py
+Copyright: 2005, Michele Simionato
+License: BSD-2-clause
+
+License: MIT-X11-BSD-like
+ By obtaining, using, and/or copying this software and/or its
+ associated documentation, you agree that you have read, understood,
+ and will comply with the following terms and conditions:
+ .
+ Permission to use, copy, modify, and distribute this software and
+ its associated documentation for any purpose and without fee is
+ hereby granted, provided that the above copyright notice appears in
+ all copies, and that both that copyright notice and this permission
+ notice appear in supporting documentation, and that the name of the
+ author not be used in advertising or publicity pertaining to
+ distribution of the software without specific, written prior
+ permission.
+ .
+ THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+ INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+ CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+ NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+ WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: BSD-2-clause
+ Copyright © 2006-2009 Steven J. Bethard <steven.bethard@gmail.com>.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 License: BSD-3-clause
- Copyright (c) 2008, IPython Development Team
- .
  All rights reserved.
  .
  Redistribution and use in source and binary forms, with or without
@@ -86,48 +142,6 @@ License: BSD-3-clause
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-License: BSD-2-clause
- Copyright © 2006-2009 Steven J. Bethard <steven.bethard@gmail.com>.
-.
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are met:
- .
-  * Redistributions of source code must retain the above copyright notice, this
-    list of conditions and the following disclaimer.
-  * Redistributions in binary form must reproduce the above copyright notice,
-    this list of conditions and the following disclaimer in the documentation
-    and/or other materials provided with the distribution.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
- FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
- SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
- CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU General Public
- License, version 2, can be found in /usr/share/common-licenses/GPL-2.
-
 
 License: PSF
  PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
@@ -179,82 +193,37 @@ License: PSF
  agrees to be bound by the terms and conditions of this License
  Agreement.
 
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation,
+ version 2.1 of the License.
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library (see the the license.txt file); if not, write to the
+ Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
 
-License: ZPL
- Zope Public License (ZPL) Version 2.1
- -----------------------------------------------
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ use this file except in compliance with the License. You may obtain a copy
+ of the License at
  .
- A copyright notice accompanies this license document that
- identifies the copyright holders.
+     http://www.apache.org/licenses/LICENSE-2.0
  .
- This license has been certified as open source. It has also
- been designated as GPL compatible by the Free Software
- Foundation (FSF).
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ License for the specific language governing permissions and limitations
+ under the License.
  .
- Redistribution and use in source and binary forms, with or
- without modification, are permitted provided that the
- following conditions are met:
- .
- 1. Redistributions in source code must retain the
-    accompanying copyright notice, this list of conditions,
-    and the following disclaimer.
- .
- 2. Redistributions in binary form must reproduce the accompanying
-    copyright notice, this list of conditions, and the
-    following disclaimer in the documentation and/or other
-    materials provided with the distribution.
- .
- 3. Names of the copyright holders must not be used to
-    endorse or promote products derived from this software
-    without prior written permission from the copyright
-    holders.
- .
- 4. The right to distribute this software or to use it for
-    any purpose does not give you the right to use
-    Servicemarks (sm) or Trademarks (tm) of the copyright
-    holders. Use of them is covered by separate agreement
-    with the copyright holders.
- .
- 5. If any files are modified, you must cause the modified
-    files to carry prominent notices stating that you changed
-    the files and the date of any change.
- .
- Disclaimer
- .
-   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS''
-   AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT
-   NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
-   AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN
-   NO EVENT SHALL THE COPYRIGHT HOLDERS BE
-   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-   LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-   HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-   OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
-   DAMAGE.
-
-
-License: MIT
- MIT License
- -----------
- .
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to
- deal in the Software without restriction, including without limitation the
- rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
- sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- .
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
- IN THE SOFTWARE.
+ On Debian systems, the full text of the Apache License, Version 2.0
+ can be found in the file
+ `/usr/share/common-licenses/Apache-2.0'.
