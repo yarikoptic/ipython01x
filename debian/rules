@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-export DH_VERBOSE=1
+export DH_VERBOSE=2
 PYVERS = $(shell pyversions -rv)
 
 override_dh_compress:
@@ -31,62 +31,64 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 endif
 
 override_dh_install:
-	dh_install -pipython --exclude="IPython/parallel/" \
+	dh_install -pipython01x --exclude="IPython/parallel/" \
 		--exclude="IPython/frontend/qt/" \
 		--exclude="IPython/deathrow/" \
 		--exclude="IPython/quarantine/"
-	dh_install -pipython-parallel IPython/parallel/ usr/share/pyshared/IPython
-	dh_install -pipython-qtconsole IPython/frontend/qt/ usr/share/pyshared/IPython/frontend
+	dh_install -pipython01x-parallel IPython/parallel/ usr/share/pyshared/IPython
+	dh_install -pipython01x-qtconsole IPython/frontend/qt/ usr/share/pyshared/IPython/frontend
 
 	# remove embedded arparse
-	find $(CURDIR)/debian/ipython/usr/ -name _argparse.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _argparse.py -delete
 
 	# remove embedded configobj
-	find $(CURDIR)/debian/ipython/usr/ -name _configobj.py -delete
-	find $(CURDIR)/debian/ipython/usr/ -name _validate.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _configobj.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _validate.py -delete
 
 	# remove embedded simplegeneric
-	find $(CURDIR)/debian/ipython/usr/ -name _simplegeneric.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _simplegeneric.py -delete
 
 	# remove embedded decorator
-	find $(CURDIR)/debian/ipython/usr/ -name _decorator.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _decorator.py -delete
 
 	# remove embedded pexpect
-	find $(CURDIR)/debian/ipython/usr/ -name _pexpect.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _pexpect.py -delete
 
 	# remove embedded pyparsing
-	find $(CURDIR)/debian/ipython/usr/ -name _pyparsing.py -delete
+	find $(CURDIR)/debian/ipython*/usr/ -name _pyparsing.py -delete
 
 	# add wrapper scripts for all python versions
-	set -e ;\
+	set -ex ;\
 	firstpyver="" ;\
 	for pyvers in $(PYVERS); do \
+		echo "Working on $$pyvers"; \
 	    if [ "$${firstpyver}" = "" ]; then \
-	        install -m 755 debian/ipython.sh $(CURDIR)/debian/ipython/usr/bin/ipython$$pyvers ;\
+	        install -m 755 debian/ipython01x.sh $(CURDIR)/debian/ipython01x/usr/bin/ipython$${pyvers}01x ;\
 	        firstpyver="$$pyvers" ;\
 	    else \
-	        dh_link /usr/bin/ipython$${firstpyver} /usr/bin/ipython$$pyvers ;\
+	        echo ANOTHER PLACE OF CHAOS: dh_link /usr/bin/ipython$${firstpyver}01x /usr/bin/ipython$${pyvers}01x ;\
 	    fi ;\
-	    dh_link /usr/share/man/man1/ipython.1.gz /usr/share/man/man1/ipython$$pyvers.1.gz ;\
+	    echo BRINGS CHAOS to dh_link: dh_link /usr/share/man/man1/ipython01x.1.gz /usr/share/man/man1/ipython$${pyvers}01x.1.gz ;\
 	done
+	echo "DONE WITH THE LOOP"
 
 	# change permission on scripts
-	chmod a-x $(CURDIR)/debian/ipython/usr/share/doc/ipython/examples/*
+	chmod a-x $(CURDIR)/debian/ipython*/usr/share/doc/ipython/examples/*
 
 override_dh_installdocs:
 ifeq (,$(filter nodocs,$(DEB_BUILD_OPTIONS)))
-	dh_installdocs -pipython
-	dh_installdocs -pipython-parallel --link-doc=ipython
-	dh_installdocs -pipython-qtconsole --link-doc=ipython
-	dh_installdocs -pipython-doc --link-doc=ipython
+	dh_installdocs -pipython01x
+	dh_installdocs -pipython01x-parallel --link-doc=ipython
+	dh_installdocs -pipython01x-qtconsole --link-doc=ipython
+	dh_installdocs -pipython01x-doc --link-doc=ipython
 endif
 
 override_dh_installexamples:
-	dh_installexamples -pipython --exclude="examples/newparallel/"
-	dh_installexamples -pipython-parallel
+	dh_installexamples -pipython01x --exclude="examples/newparallel/"
+	dh_installexamples -pipython01x-parallel
 
-# Perform all evil 01X renaming within dh_usrlocal
-override_dh_usrlocal:
+# Perform all evil 01X renaming within dh_perl, which happens before dh_python2 call
+override_dh_perl:
 	: # and here we are
 	: # The Module
 	{ /usr/bin/find debian/ipy* -name IPython | \
