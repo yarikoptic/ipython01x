@@ -58,34 +58,34 @@ override_dh_install:
 	find $(CURDIR)/debian/ipython*/usr/ -name _pyparsing.py -delete
 
 	# add wrapper scripts for all python versions
-	set -ex ;\
+	set -e ;\
 	firstpyver="" ;\
+	mkdir -p $(CURDIR)/debian/ipython01x/usr/share/man/man1/; \
 	for pyvers in $(PYVERS); do \
-		echo "Working on $$pyvers"; \
 	    if [ "$${firstpyver}" = "" ]; then \
-	        install -m 755 debian/ipython01x.sh $(CURDIR)/debian/ipython01x/usr/bin/ipython$${pyvers}01x ;\
+	        install -m 755 debian/ipython01x.sh $(CURDIR)/debian/ipython01x/usr/bin/ipython01x$${pyvers} ;\
 	        firstpyver="$$pyvers" ;\
 	    else \
-	        echo ANOTHER PLACE OF CHAOS: dh_link /usr/bin/ipython$${firstpyver}01x /usr/bin/ipython$${pyvers}01x ;\
+	        ln -sf ipython01x$${firstpyver} $(CURDIR)/debian/ipython01x/usr/bin/ipython01x$${pyvers} ;\
 	    fi ;\
-	    echo BRINGS CHAOS to dh_link: dh_link /usr/share/man/man1/ipython01x.1.gz /usr/share/man/man1/ipython$${pyvers}01x.1.gz ;\
+	    ln -sf ipython01x.1.gz $(CURDIR)/debian/ipython01x/usr/share/man/man1/ipython01x$${pyvers}.1.gz ;\
 	done
-	echo "DONE WITH THE LOOP"
 
 	# change permission on scripts
-	chmod a-x $(CURDIR)/debian/ipython*/usr/share/doc/ipython/examples/*
+	chmod a-x $(CURDIR)/debian/ipython*/usr/share/doc/ipython*/examples/*
 
 override_dh_installdocs:
 ifeq (,$(filter nodocs,$(DEB_BUILD_OPTIONS)))
 	dh_installdocs -pipython01x
-	dh_installdocs -pipython01x-parallel --link-doc=ipython
-	dh_installdocs -pipython01x-qtconsole --link-doc=ipython
-	dh_installdocs -pipython01x-doc --link-doc=ipython
+	dh_installdocs -pipython01x-parallel --link-doc=ipython01x
+	dh_installdocs -pipython01x-qtconsole --link-doc=ipython01x
+	dh_installdocs -pipython01x-doc --link-doc=ipython01x
 endif
 
 override_dh_installexamples:
 	dh_installexamples -pipython01x --exclude="examples/newparallel/"
-	dh_installexamples -pipython01x-parallel
+	# yoh: disabled for now since at this point link is dangling and do not want more mess with renamings
+	# dh_installexamples -pipython01x-parallel
 
 # Perform all evil 01X renaming within dh_perl, which happens before dh_python2 call
 override_dh_perl:
@@ -94,11 +94,11 @@ override_dh_perl:
 	{ /usr/bin/find debian/ipy* -name IPython | \
 		while read d; do mv $$d $${d}01X; done; }
 	: # misc dirs
-	{ /usr/bin/find debian/ipy* -mindepth 2 -name ipython\* -type d | \
-		while read d; do mv $$d $${d/ipython/ipython01x}; done; }
+	{ /usr/bin/find debian/ipy* -mindepth 2 -name ipython -type d | \
+		while read d; do mv $$d $${d}01x; done; }
 	: # man pages
 	{ /usr/bin/find debian/ipy* -path *man1/\* | \
-		while read d; do mv $$d $${d/.1.gz/01x.1.gz}; done; }
+		while read d; do mv $$d $${d/.1/01x.1}; done; }
 	: # desktop files
 	{ /usr/bin/find debian/ipy* -path *.desktop | \
 		while read d; do mv $$d $${d/.desktop/01x.desktop}; done; }
