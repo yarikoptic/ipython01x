@@ -106,6 +106,12 @@ override_dh_perl:
 	: # desktop files
 	{ /usr/bin/find debian/ipy* -path *.desktop | \
 		while read d; do mv $$d $${d/.desktop/01x.desktop}; done; }
+	: # emacs files
+	{ /usr/bin/find debian/ipy* -path *.el | \
+		while read d; do mv $$d $${d/.el/01x.el}; done; }
 	: # binaries
 	{ /usr/bin/find debian/ipy* -path *bin/\* | \
+		grep -v 'bin/ipython01x' | \
 		while read d; do mv $$d $${d}01x; done; }
+	: # Adjust all wrappers to import IPython01X first
+	sed -i -e 's,\(from IPython\..*\),import IPython01X; \1,g' $(CURDIR)/debian/ipy*/usr/bin/*

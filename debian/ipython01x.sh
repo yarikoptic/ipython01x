@@ -8,5 +8,5 @@ then
 	echo "Please install the python$VERSION package." >&2
 	exit 1
 else
-	exec python$VERSION -c "import sys; sys.argv[0] = '/usr/bin/ipython01x$VERSION'; from IPython01X.frontend.terminal.ipapp import launch_new_instance; launch_new_instance()" $@
+	exec python$VERSION -c "import sys; sys.argv[0] = '/usr/bin/ipython01x$VERSION'; from IPython.frontend.terminal.ipapp import launch_new_instance; launch_new_instance()" $@
 fi
