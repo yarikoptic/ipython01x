@@ -103,16 +103,16 @@ override_dh_perl:
 		while read d; do mv $$d $${d}01x; done; }
 	: # man pages
 	{ /usr/bin/find debian/ipy* -path *man1/\* | \
-		while read d; do mv $$d $${d/.1/01x.1}; done; }
+		while read d; do mv $$d $${d%.1}01x.1; done; }
 	: # desktop files
 	{ /usr/bin/find debian/ipy* -path *.desktop | \
 		while read d; do \
 			sed -i -e 's,Exec=ipython ,Exec=ipython01x ,g' $$d; \
-			mv $$d $${d/.desktop/01x.desktop}; \
+			mv $$d $${d%.desktop}01x.desktop; \
 		done; }
 	: # emacs files
 	{ /usr/bin/find debian/ipy* -path *.el | \
-		while read d; do mv $$d $${d/.el/01x.el}; done; }
+		while read d; do mv $$d $${d%.el}01x.el}; done; }
 	: # binaries
 	{ /usr/bin/find debian/ipy* -path *bin/\* | \
 		grep -v 'bin/ipython01x' | \
