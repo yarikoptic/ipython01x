@@ -92,7 +92,11 @@ override_dh_perl:
 	: # and here we are
 	: # The Module
 	{ /usr/bin/find debian/ipy* -name IPython | \
-		while read d; do mv $$d $${d}01X; done; }
+		while read d; do \
+			mkdir $${d}01X; \
+			mv $$d $${d}01X; \
+			cp $(CURDIR)/debian/c__init__.py $${d}01X/__init__.py; \
+		 done; }
 	: # misc dirs
 	{ /usr/bin/find debian/ipy* -mindepth 2 -name ipython -type d | \
 		while read d; do mv $$d $${d}01x; done; }
