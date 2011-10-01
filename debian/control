@@ -40,7 +40,9 @@ Depends: python-argparse,
          python-simplegeneric,
          ${misc:Depends},
          ${python:Depends}
-Recommends: python-tornado (>= 2.1.0~)
+Recommends: python-tornado (>= 2.1.0~),
+            python-zmq,
+            python-matplotlib
 Conflicts: ipython-common, python2.3-ipython, python2.4-ipython
 Replaces: ipython-common, python2.3-ipython, python2.4-ipython
 Suggests: ipython01x-doc,
