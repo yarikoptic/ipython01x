@@ -1,4 +1,10 @@
-ipython01x (0.11+git511-g039e00a-1) UNRELEASED; urgency=low
+ipython01x (0.11+git915-gc3d885f-1) neurodebian; urgency=low
+
+  * Fresh upstream snapshot
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 03 Nov 2011 22:18:00 -0400
+
+ipython01x (0.11+git511-g039e00a-1) neurodebian; urgency=low
 
   * Custom build of current GIT master to make this unreleased version
     available without conflicting with system-wide available ipython
