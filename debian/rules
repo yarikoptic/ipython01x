@@ -119,3 +119,11 @@ override_dh_perl:
 		while read d; do mv $$d $${d}01x; done; }
 	: # Adjust all wrappers to import IPython01X first
 	sed -i -e 's,\(from IPython\..*\),import IPython01X; \1,g' $(CURDIR)/debian/ipy*/usr/bin/*
+
+get-orig-source-git:
+	git fetch origin
+	uver=$$(git describe origin/master | sed -e 's,rel-\([.0-9]*\)-\([0-9]*-g.*\),\1+git\2,g') && \
+	git archive --prefix=ipython01x-$$uver/ --format=tar origin/master \
+	| gzip >| ../tarballs/ipython01x_$$uver.orig.tar.gz && \
+	dch --noconf --newversion $$uver-1 -D neurodebian --force-distribution "Fresh upstream snapshot" && \
+	git commit -m "Changelog for a new snapshot revision $$uver" debian/changelog
