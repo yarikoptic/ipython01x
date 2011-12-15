@@ -15,21 +15,3 @@ Forwarded: not-needed
 +except ImportError as e:
 +  if "qt.console.qtconsoleapp" in e.message:
 +    print "Could not start qtconsole. Please install ipython-qtconsole"
---- a/IPython/zmq/__init__.py
-+++ b/IPython/zmq/__init__.py
-@@ -18,13 +18,13 @@ def check_for_zmq(minimum_version, modul
-     try:
-         import zmq
-     except ImportError:
--        raise ImportError("%s requires pyzmq >= %s"%(module, minimum_version))
-+        raise ImportError("%s requires py-zmq >= %s"%(module, minimum_version))
- 
-     pyzmq_version = zmq.__version__
-     vlist = [int(n) for n in re.findall(r'\d+', pyzmq_version)]
- 
-     if 'dev' not in pyzmq_version and vlist < min_vlist:
--        raise ImportError("%s requires pyzmq >= %s, but you have %s"%(
-+        raise ImportError("%s requires py-zmq >= %s, but you have %s"%(
-                         module, minimum_version, pyzmq_version))
- 
-     # fix missing DEALER/ROUTER aliases in pyzmq < 2.1.9
