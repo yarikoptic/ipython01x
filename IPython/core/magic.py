@@ -96,6 +96,9 @@ def needs_local_scope(func):
 # Used for exception handling in magic_edit
 class MacroToEdit(ValueError): pass
 
+# Taken from PEP 263, this is the official encoding regexp.
+_encoding_declaration_re = re.compile(r"^#.*coding[:=]\s*([-\w.]+)")
+
 #***************************************************************************
 # Main class implementing Magic functionality
 
@@ -2151,16 +2154,33 @@ Currently the magic system has the following functions:\n"""
         %loadpy http://www.example.com/myscript.py
         """
         arg_s = unquote_filename(arg_s)
-        if not arg_s.endswith('.py'):
+        remote_url = arg_s.startswith(('http://', 'https://'))
+        local_url = not remote_url
+        if local_url and not arg_s.endswith('.py'):
+            # Local files must be .py; for remote URLs it's possible that the
+            # fetch URL doesn't have a .py in it (many servers have an opaque
+            # URL, such as scipy-central.org).
             raise ValueError('%%load only works with .py files: %s' % arg_s)
-        if arg_s.startswith('http'):
+        if remote_url:
             import urllib2
-            response = urllib2.urlopen(arg_s)
-            content = response.read()
+            fileobj = urllib2.urlopen(arg_s)
+            # While responses have a .info().getencoding() way of asking for
+            # their encoding, in *many* cases the return value is bogus.  In
+            # the wild, servers serving utf-8 but declaring latin-1 are
+            # extremely common, as the old HTTP standards specify latin-1 as
+            # the default but many modern filesystems use utf-8.  So we can NOT
+            # rely on the headers.  Short of building complex encoding-guessing
+            # logic, going with utf-8 is a simple solution likely to be right
+            # in most real-world cases.
+            linesource = fileobj.read().decode('utf-8', 'replace').splitlines()
         else:
-            with open(arg_s) as f:
-                content = f.read()
-        self.set_next_input(content)
+            fileobj = linesource = open(arg_s)
+        
+        # Strip out encoding declarations
+        lines = [l for l in linesource if not _encoding_declaration_re.match(l)]
+        fileobj.close()
+        
+        self.set_next_input(os.linesep.join(lines))
 
     def _find_edit_target(self, args, opts, last_call):
         """Utility method used by magic_edit to find what to edit."""
@@ -3340,49 +3360,24 @@ Defaulting color scheme to 'NoColor'"""
         """Reload an IPython extension by its module name."""
         self.extension_manager.reload_extension(module_str)
 
-    @skip_doctest
     def magic_install_profiles(self, s):
-        """Install the default IPython profiles into the .ipython dir.
+        """%install_profiles has been deprecated."""
+        print '\n'.join([
+            "%install_profiles has been deprecated.",
+            "Use `ipython profile list` to view available profiles.",
+            "Requesting a profile with `ipython profile create <name>`",
+            "or `ipython --profile=<name>` will start with the bundled",
+            "profile of that name if it exists." 
+        ])
 
-        If the default profiles have already been installed, they will not
-        be overwritten. You can force overwriting them by using the ``-o``
-        option::
-
-            In [1]: %install_profiles -o
-        """
-        if '-o' in s:
-            overwrite = True
-        else:
-            overwrite = False
-        from IPython.config import profile
-        profile_dir = os.path.dirname(profile.__file__)
-        ipython_dir = self.ipython_dir
-        print "Installing profiles to: %s [overwrite=%s]"%(ipython_dir,overwrite)
-        for src in os.listdir(profile_dir):
-            if src.startswith('profile_'):
-                name = src.replace('profile_', '')
-                print "    %s"%name
-                pd = ProfileDir.create_profile_dir_by_name(ipython_dir, name)
-                pd.copy_config_file('ipython_config.py', path=src,
-                                overwrite=overwrite)
-
-    @skip_doctest
     def magic_install_default_config(self, s):
-        """Install IPython's default config file into the .ipython dir.
-
-        If the default config file (:file:`ipython_config.py`) is already
-        installed, it will not be overwritten. You can force overwriting
-        by using the ``-o`` option::
-
-            In [1]: %install_default_config
-        """
-        if '-o' in s:
-            overwrite = True
-        else:
-            overwrite = False
-        pd = self.shell.profile_dir
-        print "Installing default config file in: %s" % pd.location
-        pd.copy_config_file('ipython_config.py', overwrite=overwrite)
+        """%install_default_config has been deprecated."""
+        print '\n'.join([
+            "%install_default_config has been deprecated.",
+            "Use `ipython profile create <name>` to initialize a profile",
+            "with the default config files.",
+            "Add `--reset` to overwrite already existing config files with defaults."
+        ])
 
     # Pylab support: simple wrappers that activate pylab, load gui input
     # handling and modify slightly %run
