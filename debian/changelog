@@ -1,3 +1,9 @@
+ipython01x (0.12-1) neurodebian; urgency=low
+
+  * 0.12 release non-official Debian package
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 20 Dec 2011 10:05:38 -0500
+
 ipython01x (0.11+git1399-g2c683b7-1) neurodebian; urgency=low
 
   * 0.12 release candidate 1
